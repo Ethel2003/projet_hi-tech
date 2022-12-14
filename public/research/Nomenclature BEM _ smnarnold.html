@@ -1,0 +1,536 @@
+<!doctype html>
+<html
+    class="">
+<head>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Nomenclature BEM | smnarnold</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#cbfff9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#333" media="(prefers-color-scheme: dark)">
+  <meta property="og:locale" content="en_US" />
+  <meta name="title" content="Nomenclature BEM">
+
+    <meta property="og:title" content="SASS - Nomenclature BEM">
+  
+  <meta property="og:url" content="https://smnarnold.com/cours/sass/nomenclature-bem">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="smnarnold">
+
+  
+   
+  <meta property="og:image" content="https://smnarnold.com/assets/page-previews/bem.png">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  
+
+          <meta property="article:published_time" content="2021-09-01">
+            <meta property="article:modified_time" content="2021-09-01">
+    
+        <meta property="article:section" content="SASS">
+    
+        <meta property="article:author" content="https://www.facebook.com/sim0n.arn0ld">
+      
+    <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@smnarnold">
+  
+  
+  
+
+  <link rel="canonical" href="https://smnarnold.com/cours/sass/nomenclature-bem" />
+
+
+    <!--=== Fonts =======================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@350;450&display=swap" rel="stylesheet">
+
+    <!--=== Favicons ====================================-->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/images/favicons/site.webmanifest">
+<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#7cfef0">
+<link rel="shortcut icon" href="/images/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#7cfef0">
+<meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+<meta name="theme-color" content="#cbfff9">
+
+    <!--=== Styles ======================================-->
+    <link rel="stylesheet" href="/css/site.css">
+    
+    <!--=== Scripts =====================================-->
+    <script>
+        // Color scheme
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            window.colorScheme = 'dark';
+        } else {
+            window.colorScheme = 'light';
+        }
+
+            </script>
+
+    <!--=== Google Analytics ============================-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37943713-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-37943713-5');
+</script>
+
+
+    <!--=== Dynamic import ==============================-->
+</head>
+
+<body data-module="Page">
+
+    <header class="site-header">
+
+  <span class="site-header__bg"></span>
+  <div class="site-header__container">
+    <a href="/" class="site-logo">
+  <span class="site-logo__bg"></span>
+  <span class="site-logo__text">
+    <span class="green">S</span><span class="blue">M</span><span class="red">N</span><br class="site-logo__break">ARN<br class="site-logo__break">OLD
+  </span>
+</a>
+
+    <input id="site-header__toggle" type="checkbox">
+
+    <label for="site-header__toggle" class="site-header__toggle hamburger">
+      <span class="hamburger__box">
+          <span class="hamburger__icon">
+            <span class="visually-hidden">Menu</span>
+          </span>
+      </span>
+    </label>
+
+    <label for="site-header__toggle" class="site-header__overlay"></label>
+
+    <div class="site-header__menu">
+      <nav class="site-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <ul class="site-nav__list">
+                <li class="site-nav__item">
+        <a href="/" class="site-nav__link">
+          Accueil
+        </a>
+      </li>
+                                <li class="site-nav__item">
+        <a href="/cours" class="site-nav__link is-active">
+          Cours
+        </a>
+      </li>
+                      <li class="site-nav__item">
+        <a href="/projets" class="site-nav__link">
+          Projets
+        </a>
+      </li>
+                      <li class="site-nav__item">
+        <a href="/utilise" class="site-nav__link">
+          J'utilise
+        </a>
+      </li>
+          
+  </ul>
+
+  <button 
+  aria-label="Activer le thème sombre" 
+  title="Activer le thème sombre" 
+  class="color-scheme-switch"
+  data-module="ColorSchemeSwitch">
+  <span class="color-scheme-switch__circle">
+    <span class="color-scheme-switch__circle__mask"></span>
+  </span>
+</button>
+
+</nav>
+    </div>
+  </div>
+</header>
+
+
+
+    <main>
+        <div id="top"></div>
+        <article class="page page--article">
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+      <a 
+        href="/"
+        class="breadcrumbs__link">Accueil</a>
+    </li>
+      <li class="breadcrumbs__item">
+      <a 
+        href="/cours"
+        class="breadcrumbs__link">Cours</a>
+    </li>
+      <li class="breadcrumbs__item">
+      <a 
+        href="/cours/sass"
+        class="breadcrumbs__link">SASS</a>
+    </li>
+  
+</ul>
+      <h1 class="page-header__title">
+                        <img 
+          src="/img/asset/YXNzZXRzL3BhZ2UtcHJldmlld3MvYmVtLnBuZw==?h=100&s=b8075d87690fc1c3d359afbd475c7c37" 
+          width="150" 
+          height="100" 
+          class="page-header__preview">
+        
+        
+        Nomenclature BEM
+      </h1>
+
+      
+    </div>
+  </header>
+
+  <div class="page__body">
+    <div class="bard wysiwyg" data-module="Bard">
+          <p>Le choix d&#039;une nomenclature est un aspect important d&#039;un projet. Il permet d&#039;écrire un CSS de qualité et d&#039;anticiper comment les autres membres de son équipe écriront leurs classes CSS. Ceci résulte en un code uniforme, facilement maintenable plutôt qu&#039;une agglomération de différents styles de codes écrits par différents développeurs.</p><p>BEM est l&#039;une des nomenclatures CSS les plus répandues. Elle permet d&#039;éviter de nombreux effets secondaires <em>(side effects)</em> tout en améliorant la performance des feuilles de styles.</p><p>Lorsqu&#039;un projet grossi, il n&#039;est pas rare d&#039;attribuer le même nom de classe à différentes composantes. Par exemple, imaginons que vous créez une composante de héros et que vous souhaitez afficher son titre en italique. <br><br>Vous écrivez donc le code suivant:</p><pre><code>.title {
+  font-style: italic;
+}</code></pre><p>Cependant, si vous ou l&#039;un de vos collègues travaille éventuellement sur une composante d&#039;article et qu&#039;à l&#039;intérieur de celle-ci se trouve aussi un titre, il est probable que son réflexe ou le votre soit de le cibler via la classe <code>.title</code> à nouveau, ce qui engendra des effets secondaires indésirables. Le titre de l&#039;article héritera du style italique initialement attribué au titre du héros et tous les nouveaux styles appliqués au titre de l&#039;article s&#039;appliqueront aussi au titre du héros 🤮.</p><p>Heureusement, BEM permet d&#039;éviter cette confusion!</p>
+          <h2 
+  class="heading heading--h2" 
+  id="Origine du nom">Origine du nom<a 
+    href="#Origine du nom" 
+    aria-hidden="true"
+    class="heading__anchor" 
+    data-module="CopyToClipboard" 
+    data-text="https://smnarnold.com/cours/sass/nomenclature-bem#Origine du nom"
+    data-snackbar="Lien copié.">
+    <span class="heading__anchor__wrapper">
+      <svg viewBox="0 0 24 24">
+        <path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/>
+      </svg>
+    </span>
+  </a>
+  </h2>
+
+          <p>Le nom BEM provient de l&#039;abréviation de: Blocs, Éléments et Modificateurs qui sont les trois piliers de cette nomenclature.</p>
+          <h2 
+  class="heading heading--h2" 
+  id="Blocs">Blocs<a 
+    href="#Blocs" 
+    aria-hidden="true"
+    class="heading__anchor" 
+    data-module="CopyToClipboard" 
+    data-text="https://smnarnold.com/cours/sass/nomenclature-bem#Blocs"
+    data-snackbar="Lien copié.">
+    <span class="heading__anchor__wrapper">
+      <svg viewBox="0 0 24 24">
+        <path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/>
+      </svg>
+    </span>
+  </a>
+  </h2>
+
+          <p>Les blocs sont des noms de classes représentant des composantes de base pouvant être facilement identifiable dans une page par leur simple nom.</p><p>Par exemple: <code>.site-header</code>, <code>.hero</code>, <code>.article</code>, etc. sont tous des composantes que nous devrions être à même de reconnaitre.</p><pre><code>&lt;div class=&quot;hero&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre>
+          <h2 
+  class="heading heading--h2" 
+  id="Éléments">Éléments<a 
+    href="#Éléments" 
+    aria-hidden="true"
+    class="heading__anchor" 
+    data-module="CopyToClipboard" 
+    data-text="https://smnarnold.com/cours/sass/nomenclature-bem#Éléments"
+    data-snackbar="Lien copié.">
+    <span class="heading__anchor__wrapper">
+      <svg viewBox="0 0 24 24">
+        <path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/>
+      </svg>
+    </span>
+  </a>
+  </h2>
+
+          <p>Les éléments sont des sous-composantes avec des noms génériques ayant un lien étroit avec leur bloc.</p><p>Par exemple: <code>title</code>, <code>list</code>, <code>item</code>, etc. sont des noms de composantes génériques qui pourraient être présents dans chacun des blocs précédemment mentionnés. Styliser une de ces composantes à partir de son nom générique, par exemple <code>.title</code>, dans chacune de ces composantes entrainerait assurément des effets secondaires indésirables entre chacune d&#039;entre elles. </p><p>Heureusement, avec la nomenclature BEM ces effets secondaires seraient évités, puisque la classe d&#039;un élément est constituée du nom de son bloc suivi de deux barres de soulignement <code>__</code> et du nom de l&#039;élément. <br><br>Par exemple: </p><pre><code>&lt;div class=&quot;hero&quot;&gt;
+  &lt;h2 class=&quot;hero__title&quot;&gt;Titre&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+          <h2 
+  class="heading heading--h2" 
+  id="Modificateurs">Modificateurs<a 
+    href="#Modificateurs" 
+    aria-hidden="true"
+    class="heading__anchor" 
+    data-module="CopyToClipboard" 
+    data-text="https://smnarnold.com/cours/sass/nomenclature-bem#Modificateurs"
+    data-snackbar="Lien copié.">
+    <span class="heading__anchor__wrapper">
+      <svg viewBox="0 0 24 24">
+        <path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/>
+      </svg>
+    </span>
+  </a>
+  </h2>
+
+          <p>Les modificateurs sont des drapeaux, ou en anglais: un <em>&quot;flags&quot;</em>, permettant de changer le comportement ou l&#039;apparence d&#039;un bloc ou d&#039;un élément.</p><p>Par exemple: <code>active</code>, <code>disabled</code>, <code>big</code>, etc. </p><p>Avec BEM, un modificateur est séparé de son bloc ou de son élément à l&#039;aide de deux tirets <code>--</code>.</p><p>Par exemple:</p><pre><code>&lt;div class=&quot;hero&quot;&gt;
+  &lt;h2 class=&quot;hero__title hero__title--big&quot;&gt;Titre&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+          <aside class="note note--warn">
+  <div class="note__wrapper">
+        <p>Remarquez qu&#8217;un modificateur ne remplace pas une classe de base, mais est ajouté en&nbsp;surplus.</p>
+
+  </div>
+</aside>
+          <h2 
+  class="heading heading--h2" 
+  id="Imbrication">Imbrication<a 
+    href="#Imbrication" 
+    aria-hidden="true"
+    class="heading__anchor" 
+    data-module="CopyToClipboard" 
+    data-text="https://smnarnold.com/cours/sass/nomenclature-bem#Imbrication"
+    data-snackbar="Lien copié.">
+    <span class="heading__anchor__wrapper">
+      <svg viewBox="0 0 24 24">
+        <path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/>
+      </svg>
+    </span>
+  </a>
+  </h2>
+
+          <p>Il faut faire attention avec l&#039;imbrication de BEM. Personne ne veut travailler dans un code où des classes CSS ressemblent à:</p><p> 🚫</p><pre><code>.homepage__hero__wrapper__title { ... } </code></pre><p>Il est donc important de bien savoir diviser ses blocs. Dans l&#039;exemple précédent, il serait logique d&#039;avoir un bloc de départ <code>.homepage</code> ainsi qu&#039;un bloc <code>.hero</code>.</p><p>Le bloc <code>.hero</code> pourrait avoir différents niveaux d&#039;éléments, mais il n&#039;est pas nécessaire de nommer chacun d&#039;entre eux. </p><p>Par exemple, il n&#039;est pas nécessaire dans son nom de classe de spécifier que le titre se trouve dans le wrapper. Ainsi une division de la sorte permettrait d&#039;obtenir un code plus lisible:</p><p> 👌</p><pre><code>.hero__wrapper { ... }
+.hero__title { ... }</code></pre>
+          <aside class="tool-card">
+  <div class="tool-card__content">
+    <em class="tool-card__tagline">🛠 Outil</em><br class="tool-card__break">
+    <a 
+      href="http://getbem.com/" 
+      target="_blank"
+      rel="noopener noreferrer"
+      class="tool-card__title">
+      <strong>Get&nbsp;BEM</strong>
+    </a>
+
+        <p class="tool-card__description">Site de référence consacré uniquement à la nomenclature&nbsp;BEM.</p>
+      </div>
+
+      <picture class="tool-card__preview">
+      <source srcset="/img/asset/YXNzZXRzL3Rvb2xzL2dldC1iZW0uanBn?w=620&s=ef976281b3e86a3b4ffd43a214be349a" media="(max-width: 575px) and (min-resolution: 2dppx)">
+      <source srcset="/img/asset/YXNzZXRzL3Rvb2xzL2dldC1iZW0uanBn?w=310&s=51cf004728e3b161ff5af4255477c661" media="(max-width: 575px)">
+      <source srcset="/img/asset/YXNzZXRzL3Rvb2xzL2dldC1iZW0uanBn?w=370&s=0f82983c04efdf4cad19e9df8ba23ccb" media="(min-resolution: 2dppx)">
+      <img 
+        src="/img/asset/YXNzZXRzL3Rvb2xzL2dldC1iZW0uanBn?w=185&s=cd09ad37eacabc471df2c060b5b944d6" 
+        width="" 
+        height="" 
+        loading="lazy"
+        class="tool-card__image"
+        style="object-position: 50% 50%;">>
+    </picture>
+    </aside>
+          <h2 
+  class="heading heading--h2" 
+  id="SASS">SASS<a 
+    href="#SASS" 
+    aria-hidden="true"
+    class="heading__anchor" 
+    data-module="CopyToClipboard" 
+    data-text="https://smnarnold.com/cours/sass/nomenclature-bem#SASS"
+    data-snackbar="Lien copié.">
+    <span class="heading__anchor__wrapper">
+      <svg viewBox="0 0 24 24">
+        <path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/>
+      </svg>
+    </span>
+  </a>
+  </h2>
+
+          <h3 
+  class="heading heading--h3" 
+  id="Nesting">Nesting</h3>
+
+          <p>Il peut être fastidieux de toujours répéter le même bloc au début de chaque nom de classe. D&#039;où pourquoi la nomenclature BEM se marie si bien avec SASS. En tirant profit de l&#039;imbrication (<em>nesting)</em> de SASS, il est possible de définir un bloc de ensuite ses éléments à l&#039;intérieur de lui, sans jamais se répéter!</p><p>Par exemple:</p><pre><code>.hero {
+  &amp;__wrapper { width: 100%; }
+  &amp;__title { font-style: italic; }
+}</code></pre><p>Ce qui générera le code CSS suivant:</p><pre><code>.hero__wrapper { width: 100%; } 
+.hero__title { font-style: italic; }</code></pre>
+          <h3 
+  class="heading heading--h3" 
+  id="Modificateurs">Modificateurs</h3>
+
+          <p>Les modificateurs sont faciles à écrire à l&#039;aide de <code>@extend</code>. </p><p>Par exemple</p><pre><code>.hero__title {
+  font-style: italic;
+
+  &amp;--big { 
+    @extend .hero__title;
+    font-size: 40px; 
+  }
+}</code></pre><p>Ce qui générera le code CSS suivant:</p><pre><code>.hero__title, .hero__title--big {
+  font-style: italic;
+}
+.hero__title--big {
+  font-size: 40px;
+}</code></pre>
+          <h3 
+  class="heading heading--h3" 
+  id="Découpage">Découpage</h3>
+
+          <p>Il est fortement suggéré que chaque élément assez important pour être un bloc est son propre fichier SASS distinct.</p><p>Par exemple, le fichier <em>hero.scss</em> ne contiendrait qu&#039;un seul bloc, soit <code>.hero</code>. Le fichier <em>site-header.scss</em> ne contiendrait que le bloc <code>.site-header</code> et ainsi de suite.</p>
+          <h2 
+  class="heading heading--h2" 
+  id="Alternatives">Alternatives<a 
+    href="#Alternatives" 
+    aria-hidden="true"
+    class="heading__anchor" 
+    data-module="CopyToClipboard" 
+    data-text="https://smnarnold.com/cours/sass/nomenclature-bem#Alternatives"
+    data-snackbar="Lien copié.">
+    <span class="heading__anchor__wrapper">
+      <svg viewBox="0 0 24 24">
+        <path d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5zm-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-2zm-3-4h8v2H8z"/>
+      </svg>
+    </span>
+  </a>
+  </h2>
+
+          <ul><li><p><a target="_blank" rel="noopener noreferrer" href="http://oocss.org/">OOCSS</a></p></li><li><p><a target="_blank" rel="noopener noreferrer" href="http://smacss.com/">SMACSS</a></p></li><li><p><a target="_blank" rel="noopener noreferrer" href="http://suitcss.github.io/">SUITCSS</a></p></li><li><p>etc.</p></li></ul><p></p><p></p>
+    
+    </div>
+  </div>
+
+  <aside class="table-of-contents" data-module="TableOfContents">
+  <div class="table-of-contents__wrapper">
+    <h2 class="table-of-contents__heading">Table des matières</h2>
+    <nav class="table-of-contents__nav">
+      <ol class="table-of-contents__list">
+        <li class="table-of-contents__item">
+          <a href="#top" class="table-of-contents__link">Introduction</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</aside>
+</article>
+
+<aside 
+  class="vote vote--article" 
+  data-slug="nomenclature-bem" 
+  data-parent="sass"
+  data-type="Article - Feedback"
+  data-module="Vote">
+  <div class="vote__title">
+    Donnez votre opinion<br>sur les <u>notes de cours</u> de cette page.<br>
+  </div>
+  
+  <div class="vote__options">
+    <button class="vote__item is-disabled" disabled="true">
+      <span class="vote__icon">📝</span>
+      <div class="vote__desc">Revoir<br>le texte</div>
+    </button>
+
+    <button class="vote__item is-disabled" disabled="true">
+      <span class="vote__icon">🖼️</span>
+      <div class="vote__desc">Ajouter<br>plus d'exemples</div>
+    </button>
+    
+    <button class="vote__item is-disabled" disabled="true">
+      <span class="vote__icon">✍️</span>
+      <div class="vote__desc">Ajouter<br>plus d'exercices</div>
+    </button>
+
+    <button class="vote__item is-disabled" disabled="true">
+      <span class="vote__icon">👌</span>
+      <div class="vote__desc">Génial,<br>ne rien changer</div>
+    </button>
+
+    <p class="vote__form">Vous voulez me donner votre avis sur un élément en particulier?<br>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdufIbfE_5Ti4VYlNcoCDjxhSR-AVHklkhdAeBgy3uLuHvVYA/viewform?usp=pp_url&entry.2047617853=https://smnarnold.com/cours/sass/nomenclature-bem" target="_blank" rel="noopener noreferrer">Laissez-moi un commentaire Google Form!</a></p>
+  
+    <div class="vote__msg vote__msg--completed">Merci d'avoir partagé ton opinion&thinsp;😎</div>
+    <div class="vote__msg vote__msg--teaser">Pssst, c'est 💯 anonyme</div>
+  </div>
+</aside>
+
+
+
+
+
+
+
+        <div id="bottom"></div>
+    </main>
+
+    <footer class="site-footer">
+  <div class="site-footer__wrapper">
+    
+
+    <div class="social-medias">
+      <ul class="social-medias__list">
+                <li class="social-medias__item">
+          <a 
+            href="https://codepen.io/smnarnold" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-medias__link">
+            <svg viewBox="0 0 50 50">
+              <path d="M12.2 22.78v4.44L15.52 25zM23.67 19.55v-6.2l-10.41 6.94 4.65 3.11zM36.74 20.29l-10.41-6.94v6.2l5.76 3.85zM13.26 29.71l10.41 6.94v-6.2l-5.76-3.85zM26.33 30.45v6.2l10.41-6.94-4.65-3.11zM25 21.86L20.3 25l4.7 3.14L29.7 25z"/>
+              <path d="M25 0C11.19 0 0 11.19 0 25s11.19 25 25 25 25-11.19 25-25S38.81 0 25 0zm15.46 29.71c0 .06 0 .12-.01.17 0 .02-.01.04-.01.06-.01.04-.01.07-.02.11-.01.02-.01.04-.02.06l-.03.1-.03.06c-.01.03-.03.06-.05.09-.01.02-.03.04-.04.06-.02.03-.04.05-.06.08-.01.02-.03.04-.05.06-.02.02-.04.05-.07.07-.02.02-.03.04-.05.05-.02.02-.05.04-.08.06-.02.02-.04.03-.06.05-.01 0-.01.01-.02.02l-14.13 9.42c-.22.15-.48.22-.74.22s-.51-.07-.74-.22l-14.13-9.42c-.01 0-.01-.01-.02-.02a.265.265 0 01-.06-.05c-.03-.02-.05-.04-.08-.06-.02-.02-.04-.03-.05-.05-.02-.02-.04-.05-.07-.07-.02-.02-.03-.04-.05-.06-.02-.03-.04-.05-.06-.08-.01-.02-.03-.04-.04-.06-.02-.03-.03-.06-.05-.09l-.03-.06-.03-.1c-.01-.02-.01-.04-.02-.06-.01-.04-.02-.07-.02-.11 0-.02-.01-.04-.01-.06-.01-.06-.01-.12-.01-.17v-9.42c0-.06 0-.12.01-.17 0-.02.01-.04.01-.06.01-.04.01-.07.02-.11.01-.02.01-.04.02-.06l.03-.1c.01-.02.02-.04.03-.07.01-.03.03-.06.05-.09a.21.21 0 01.04-.06c.02-.03.04-.05.06-.08.01-.02.03-.04.05-.06.02-.02.04-.05.07-.07.02-.02.03-.04.05-.05.02-.02.05-.04.08-.06.02-.02.04-.03.06-.05.01 0 .01-.01.02-.02l14.13-9.42c.45-.3 1.03-.3 1.47 0l14.13 9.42c.01 0 .01.01.02.02.02.01.04.03.06.05.03.02.05.04.08.06.02.02.04.03.05.05l.07.07c.02.02.03.04.05.06.02.03.04.05.06.08.01.02.03.04.04.06.02.03.03.06.05.09.01.02.02.04.03.07.01.03.02.06.03.1.01.02.02.04.02.06.01.04.02.07.02.11 0 .02.01.04.01.06.01.06.01.11.01.17v9.42z"/>
+              <path d="M37.8 27.22v-4.44L34.48 25z"/>
+            </svg>
+          </a>
+        </li>
+        
+                <li class="social-medias__item">
+          <a 
+            href="https://github.com/smnarnold" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-medias__link">
+            <svg viewBox="0 0 50 50">
+              <path d="M25 .52c-13.8 0-25 11.19-25 25 0 11.04 7.16 20.41 17.1 23.72 1.25.23 1.71-.54 1.71-1.21 0-.59-.02-2.17-.03-4.25-6.95 1.51-8.42-3.35-8.42-3.35-1.14-2.89-2.78-3.66-2.78-3.66-2.27-1.55.17-1.52.17-1.52 2.51.18 3.83 2.58 3.83 2.58 2.23 3.82 5.85 2.72 7.28 2.08.23-1.62.87-2.72 1.59-3.34-5.55-.63-11.39-2.78-11.39-12.36 0-2.73.97-4.96 2.57-6.71-.26-.63-1.11-3.17.25-6.62 0 0 2.1-.67 6.87 2.56 1.99-.55 4.13-.83 6.26-.84 2.12.01 4.26.29 6.26.84 4.77-3.24 6.87-2.56 6.87-2.56 1.36 3.44.51 5.98.25 6.62 1.6 1.75 2.57 3.98 2.57 6.71 0 9.6-5.85 11.72-11.41 12.34.9.77 1.7 2.3 1.7 4.63 0 3.34-.03 6.04-.03 6.86 0 .67.45 1.45 1.72 1.2C42.84 45.92 50 36.56 50 25.52c0-13.81-11.19-25-25-25z" fill-rule="evenodd" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </li>
+        
+                <li class="social-medias__item">
+          <a 
+            href="https://stackoverflow.com/users/886539/simon-arnold" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-medias__link">
+            <svg viewBox="0 0 50 50">
+              <path d="M25 0C11.19 0 0 11.19 0 25s11.19 25 25 25 25-11.19 25-25S38.81 0 25 0zm-.26 12.06l11.01 9.14-1.84 2.18-10.98-9.14 1.81-2.18zm-4.19 5.95l12.93 6.04-1.21 2.59-12.93-6.04 1.21-2.59zm-2.48 6.5l13.97 2.93-.57 2.79-13.97-2.94.57-2.78zm-.86 6.56h14.38v2.72H17.21v-2.72zm20.08 8.42h-25.8v-11.4h2.99v8.42h19.83v-8.42h2.98v11.4zm-1.08-18.83L27.7 9.19l2.3-1.7 8.51 11.47-2.3 1.7z"/>
+            </svg>
+          </a>
+        </li>
+        
+                <li class="social-medias__item">
+          <a 
+            href="https://www.linkedin.com/in/smnarnold" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-medias__link">
+            <svg viewBox="0 0 50 50">
+              <path d="M25 0C11.19 0 0 11.19 0 25s11.19 25 25 25 25-11.19 25-25S38.81 0 25 0zm-8.13 39.69H10.8V20.1h6.07v19.59zm-3.13-22.33c-1.96 0-3.53-1.57-3.53-3.53 0-1.96 1.57-3.53 3.53-3.53s3.53 1.57 3.53 3.53a3.523 3.523 0 01-3.53 3.53zm19.98 22.33v-9.6c0-2.35 0-5.29-3.13-5.29s-3.72 2.55-3.72 5.09v9.79H20.8V20.1h5.88v2.74c1.18-1.96 3.33-3.33 5.68-3.13 6.27 0 7.25 4.11 7.25 9.4l.2 10.58h-6.09z"/>
+            </svg>
+          </a>
+        </li>
+              </ul>
+    </div>
+
+    <div class="copyrigths">
+      © 2019-2022 Simon Arnold. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+
+
+    <div class="snackbar">
+  <div class="snackbar__wrapper">
+    
+  </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+<html class="no-js " lang="fr" prefix="og: http://ogp.me/ns#">
+<head>
+<title>
+                            Créez des sélecteurs HTML avec la méthodologie BEM - Simplifiez-vous le CSS avec Sass - OpenClassrooms
+                    </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<meta name="application-name" content="OpenClassrooms" />
+<meta name="msapplication-TileColor" content="#7451eb" />
+<meta name="msapplication-TileImage" content="/fav-icon.png?v=3" />
+<meta name="theme-color" content="#7451eb">
+<meta property="og:locale" content="fr" />
+<link rel="icon" sizes="144x144" href="/fav-icon.png?v=3">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
+<link rel="apple-touch-icon" href="/apple-touch-icon-iphone.png?v=3" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-ipad.png?v=3" />
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-iphone-retina-display.png?v=3" />
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-ipad-retina-display.png?v=3" />
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=3" />
+<link rel="shortcut icon" href="/favicon.ico?90a58f72" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+          window.dataLayer = window.dataLayer || [];
+
+          var trustarc_reload_referrer = localStorage.getItem('trustarc_reload_referrer');
+          if(trustarc_reload_referrer){
+              window.dataLayer.push({event: 'added_new_referrer', 'newReferrer': decodeURI(trustarc_reload_referrer)});
+              localStorage.removeItem('trustarc_reload_referrer');
+          }
+
+          (function(a,s,y,n,c,h,i,d,e){
+            var isEnabled = [
+              /\/paths/,
+              /\/apprenticeship/,
+              /\/employer/,
+            ].reduce(function (acc, pathReg) {
+                var matchUrl = !!document.location.pathname.match(pathReg);
+                return acc || matchUrl;
+            }, false);
+
+            if (!isEnabled) {
+              return;
+            }
+
+            s.className+=' '+y;
+            h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+            (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+          })(window,document.documentElement,'async-hide','dataLayer',2000,{'GTM-5WM9PV':true});
+        </script>
+<link href="/legacy/css/common_oc-248e080b.css" type="text/css" rel="stylesheet" media="all" />
+<link href="/css/classify/colorDecisions.css?90a58f72" type="text/css" rel="stylesheet" media="all" />
+<link href="/legacy/css/course-65a3bb0c.css" type="text/css" rel="stylesheet" media="all" />
+<link href="https://vjs.zencdn.net/6.2.5/video-js.css" rel="stylesheet">
+<script>
+    /*! modernizr 3.3.1 (Custom Build) | MIT *
+    * https://modernizr.com/download/?-cssfilters-touchevents-setclasses !*/
+    !function(e,n,t){function o(e,n){return typeof e===n}function r(){var e,n,t,r,s,i,a;for(var l in C)if(C.hasOwnProperty(l)){if(e=[],n=C[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],a=i.split("."),1===a.length?Modernizr[a[0]]=r:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=r),g.push((r?"":"no-")+a.join("-"))}}function s(e){var n=w.className,t=Modernizr._config.classPrefix||"";if(x&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),x?w.className.baseVal=n:w.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):x?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(){var e=n.body;return e||(e=i(x?"svg":"body"),e.fake=!0),e}function l(e,t,o,r){var s,l,u,f,p="modernizr",c=i("div"),d=a();if(parseInt(o,10))for(;o--;)u=i("div"),u.id=r?r[o]:p+(o+1),c.appendChild(u);return s=i("style"),s.type="text/css",s.id="s"+p,(d.fake?d:c).appendChild(s),d.appendChild(c),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),c.id=p,d.fake&&(d.style.background="",d.style.overflow="hidden",f=w.style.overflow,w.style.overflow="hidden",w.appendChild(d)),l=t(c,e),d.fake?(d.parentNode.removeChild(d),w.style.overflow=f,w.offsetHeight):c.parentNode.removeChild(c),!!l}function u(e,n){return!!~(""+e).indexOf(n)}function f(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function p(e,n){return function(){return e.apply(n,arguments)}}function c(e,n,t){var r;for(var s in e)if(e[s]in n)return t===!1?e[s]:(r=n[e[s]],o(r,"function")?p(r,t||n):r);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function m(n,o){var r=n.length;if("CSS"in e&&"supports"in e.CSS){for(;r--;)if(e.CSS.supports(d(n[r]),o))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];r--;)s.push("("+d(n[r])+":"+o+")");return s=s.join(" or "),l("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function h(e,n,r,s){function a(){p&&(delete k.style,delete k.modElem)}if(s=o(s,"undefined")?!1:s,!o(r,"undefined")){var l=m(e,r);if(!o(l,"undefined"))return l}for(var p,c,d,h,v,y=["modernizr","tspan","samp"];!k.style&&y.length;)p=!0,k.modElem=i(y.shift()),k.style=k.modElem.style;for(d=e.length,c=0;d>c;c++)if(h=e[c],v=k.style[h],u(h,"-")&&(h=f(h)),k.style[h]!==t){if(s||o(r,"undefined"))return a(),"pfx"==n?h:!0;try{k.style[h]=r}catch(g){}if(k.style[h]!=v)return a(),"pfx"==n?h:!0}return a(),!1}function v(e,n,t,r,s){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+j.join(i+" ")+i).split(" ");return o(n,"string")||o(n,"undefined")?h(a,n,r,s):(a=(e+" "+E.join(i+" ")+i).split(" "),c(a,n,t))}function y(e,n,o){return v(e,t,t,n,o)}var g=[],C=[],S={_version:"3.3.1",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){C.push({name:e,fn:n,options:t})},addAsyncTest:function(e){C.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=S,Modernizr=new Modernizr;var w=n.documentElement,x="svg"===w.nodeName.toLowerCase(),_=S._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];S._prefixes=_;var b="CSS"in e&&"supports"in e.CSS,T="supportsCSS"in e;Modernizr.addTest("supports",b||T);var z=S.testStyles=l;Modernizr.addTest("touchevents",function(){var t;if("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch)t=!0;else{var o=["@media (",_.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join("");z(o,function(e){t=9===e.offsetTop})}return t});var P="Moz O ms Webkit",j=S._config.usePrefixes?P.split(" "):[];S._cssomPrefixes=j;var E=S._config.usePrefixes?P.toLowerCase().split(" "):[];S._domPrefixes=E;var N={elem:i("modernizr")};Modernizr._q.push(function(){delete N.elem});var k={style:N.elem.style};Modernizr._q.unshift(function(){delete k.style}),S.testAllProps=v,S.testAllProps=y,Modernizr.addTest("cssfilters",function(){if(Modernizr.supports)return y("filter","blur(2px)");var e=i("a");return e.style.cssText=_.join("filter:blur(2px); "),!!e.style.length&&(n.documentMode===t||n.documentMode>9)}),r(),s(g),delete S.addTest,delete S.addAsyncTest;for(var A=0;A<Modernizr._q.length;A++)Modernizr._q[A]();e.Modernizr=Modernizr}(window,document);
+    </script>
+<script type="text/javascript">
+    var App = {
+        startTime: (new Date()).getTime(),
+        pageGenerationDate: 1670886925000
+    };
+
+    App.user = {
+                    locale: 'fr',
+            language: 'fr',
+            country: 'BJ',
+            isPremium: false,
+            isMentor: false,
+            anonymous: true
+            };
+
+    App.preferences = {
+        debug: false,
+        assetVersion: '90a58f72',
+        contactPhone: '\u002B33\u00201\u002080\u002088\u002080\u002030',
+        adyenPublicKey: '10001\u007C889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+        application: {
+            form: {
+              funnelUrl: 'https\u003A\/\/www.tfaforms.com\/responses\/processor',
+              fields: {"firstname":"tfa_6","lastname":"tfa_4","email":"tfa_2","path_id":"tfa_138","source_name":"tfa_165","record_type_id":"tfa_217","utm_medium":"tfa_203","utm_source":"tfa_201","utm_term":"tfa_207","utm_campaign":"tfa_205","utm_content":"tfa_225","gclid":"tfa_209","fbclid":"tfa_211","dclid":"tfa_233","msclkid":"tfa_231","ttclid":"tfa_232","referrerId":"tfa_229","placement":"tfa_228","consent":"tfa_150","user_locale":"tfa_125","userId":"tfa_3","gender":"tfa_10","user_study_motivation":"tfa_171","diploma_level":"tfa_30","user_diploma":"tfa_173","language_proficiency_fr":"tfa_40","language_proficiency_en":"tfa_42","language_certificate":"tfa_224","ha_addressline_1":"tfa_16","ha_city":"tfa_18","ha_zip_code":"tfa_24","ha_state":"tfa_163","ha_country":"tfa_22","professional_status":"tfa_94","public_employment_agency_id":"tfa_159","user_public_employment_agency_certificate":"tfa_167","user_pe_advisor_email":"tfa_199","disabled_worker":"tfa_67","veteran":"tfa_73","athlete":"tfa_79","refugee":"tfa_85","rsa":"tfa_91","are":"tfa_175","api":"tfa_177","cui":"tfa_179","aah":"tfa_222","other_allocs":"tfa_223","user_can_work_in_countryOfStudy":"tfa_142","user_resume":"tfa_1","online_cv":"tfa_157","user_has_mobility":"tfa_193","user_mobility_departamental":"tfa_187","user_mobility_national":"tfa_189","user_mobility_regional":"tfa_191","user_mobility_cities":"tfa_195","work_location_1":"tfa_128","work_location_2":"tfa_130","work_location_3":"tfa_132","work_location_4":"tfa_134","work_location_5":"tfa_136","career_motivation":"tfa_123","has_computer":"tfa_43","has_mic":"tfa_49","has_webcam":"tfa_169","has_fast_internet_connection":"tfa_55","has_quiet_space":"tfa_61","has_online_courses_xp":"tfa_118","has_online_courses_xp_text":"tfa_121","found_a_company":"tfa_146","date_of_birth":"tfa_9","phone_number":"tfa_126","user_desired_start_date":"tfa_161","video_link":"tfa_213","tfa_dbFormId":"tfa_dbFormId","tfa_dbControl":"tfa_dbControl","experiment_id":"tfa_219","full_time_available":"tfa_220","with_prerequisite":"tfa_221","student_application_id":"tfa_226","company_name":"tfa_227","opportunity_id":"tfa_230","user_has_all_requirements":"tfa_239","user_is_working_in_company":"tfa_240","last_class_attended":"tfa_241","vae_request_type":"tfa_242","vae_sworn_statement":"tfa_245","vae_first_request":"tfa_256","vae_delivered_notification":"tfa_257","funding_option":"tfa_264","user_resume_url":"tfa_265","user_diploma_url":"tfa_266","language_proficiency_proof_url":"tfa_267","user_public_employment_agency_certificate_url":"tfa_268","VAE_first_request_url":"tfa_269","VAE_delivered_notification_url":"tfa_270","latest_diploma_field_of_study":"tfa_273","is_latest_diploma":"tfa_274","latest_diploma_level":"tfa_275","highest_diploma_field_of_study":"tfa_276","user_job_title":"tfa_271","user_job_start_date":"tfa_272","why_oc_support":"tfa_277","why_oc_program":"tfa_278","why_oc_flexibilty":"tfa_279","why_oc_recognition":"tfa_280","why_oc_other":"tfa_281"}
+            },
+        },
+        routes: {
+            COURSE_EVENT: '/components/courses/:courseId',
+            COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+            ACCEPT_COOKIE: '\/ajax\/components\/user\u002Daccept\u002Dconsent\u002Dcookie'
+        },
+
+                    };
+
+    App.preferences.navigationPreference = {
+            };
+
+    App.preferences.modules = {
+        'smiley': {
+            basePath: '/bundles/common/images/smiley/'
+        }
+    };
+
+    App.notifications = {};
+    App.scripts = [];
+
+    if (App.user.id) {
+        (function(){
+            var userData = { userId: App.user.id };
+
+            if (App.user.premiumType) {
+                userData.status = (App.user.premiumType === 'Premium Solo') ? 'premium solo student' : 'path student';
+            } else {
+                userData.status = 'free student';
+            }
+
+            if (App.user.isMentor) {
+                userData.status = App.user.premiumType ? (userData.status + '|mentor') : 'mentor';
+            }
+
+            if (!window.dataLayer) {
+              return;
+            }
+            window.dataLayer.push(userData);
+        })();
+    }
+</script>
+<script>    
+    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":6595809,"partTitle":"Cr\u00e9ez des s\u00e9lecteurs HTML avec la m\u00e9thodologie BEM","partSlug":"creez-des-selecteurs-html-avec-la-methodologie-bem","courseId":6106181,"courseTitle":"Simplifiez-vous le CSS avec Sass","courseSlug":"simplifiez-vous-le-css-avec-sass","courseLanguage":"fr","isIntroduction":false,"isCertifying":true};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Créez des sélecteurs HTML avec la méthodologie BEM" />
+<meta property="og:url" content="https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595809-creez-des-selecteurs-html-avec-la-methodologie-bem" />
+<meta property="og:site_name" content="OpenClassrooms" />
+<meta property="og:image" content="https://course.oc-static.com/courses/6106181/6106181_teaser_picture_1618818510.jpg" />
+<meta property="og:description" content="Apprenez à écrire du code CSS propre, maintenable et modulable dans des fichiers de style .scss. Vous utiliserez Sass la méthodologie BEM." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@OCFrance" />
+<meta name="twitter:title" content="Créez des sélecteurs HTML avec la méthodologie BEM" />
+<meta name="twitter:image" content="https://course.oc-static.com/courses/6106181/6106181_teaser_picture_1618818510.jpg" />
+<meta name="twitter:description" content="Apprenez à écrire du code CSS propre, maintenable et modulable dans des fichiers de style .scss. Vous utiliserez Sass la méthodologie BEM." />
+<link rel="canonical" href="https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595809-creez-des-selecteurs-html-avec-la-methodologie-bem" />
+</head>
+<body class="course oc-body   breadcrumbFluid">
+<ul class="skipLink">
+<li>
+<a class="skipLink__item" href="#mainContent">Aller au contenu</a>
+</li>
+<li>
+<a class="skipLink__item" href="#footerChangeLanguage">Choisir la langue</a>
+</li>
+<li id="skipLink_search">
+<a class="skipLink__item" href="#algolia-search-input">Aller à la recherche</a>
+</li>
+</ul>
+<script id="_EVENTS-IDENTIFY" type="application/json">
+        </script>
+<script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page","integrations":{"Blueshift":false,"HubSpot":false},"properties":{"pageCategory":"courses","courseTitle":"Simplifiez-vous le CSS avec Sass"}}
+    </script>
+<script id="fundingMechanisms" type="application/json">
+    {
+        "fundingMechanisms": []
+    }
+</script>
+<div id="oc-header">
+<div class="oc-mainHeader oc-mainHeader--notLogged oc-mainHeader--skeleton">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div style="display: flex;">
+<div class="oc-mainHeaderLogo oc-mainHeaderLogo--skeleton">
+<a href="/fr/" class="oc-mainHeaderLogo__link">
+<svg fill="none" height="51" width="668" viewBox="0 0 668 51" xmlns="http://www.w3.org/2000/svg">
+<title>OpenClassrooms.com</title>
+<path d="M406.011 35.018c0 2.82-.71 5.641-2.368 7.991-1.659 2.35-3.79 4.23-6.87 5.64-3.079 1.41-6.869 2.116-11.37 2.116-3.79 0-7.343-.47-10.897-1.41-3.553-.94-6.395-2.35-8.527-3.996l7.106-8.46c1.421.705 2.843 1.175 4.501 1.88 2.842.94 5.448 1.41 8.054 1.41 4.974 0 7.58-1.41 7.58-3.995 0-1.41-.711-2.35-2.132-3.056-1.421-.705-3.79-1.41-6.87-2.115-3.553-.705-6.395-1.645-8.764-2.585s-4.264-2.35-6.159-4.23c-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.87-5.64 3.079-1.41 6.869-2.116 11.37-2.116 3.079 0 6.159.47 9.001 1.175 3.08.705 5.685 1.88 7.817 3.055l-7.343 8.696c-3.316-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.895 1.88-1.895 3.056 0 1.41.711 2.35 2.132 2.82 1.421.705 3.79 1.41 6.869 2.115a49.4 49.4 0 0 1 8.765 2.585c2.369.94 4.264 2.35 6.159 4.23 1.658 1.646 2.605 4.466 2.605 7.756zm261.989 0c0 2.82-.711 5.641-2.369 7.991s-3.79 4.23-6.869 5.64c-3.08 1.41-6.87 2.116-11.371 2.116-3.79 0-7.343-.47-10.896-1.41s-6.396-2.35-8.528-3.996l7.107-8.46c1.421.705 2.842 1.175 4.501 1.88 2.842.94 5.448 1.41 8.053 1.41 4.975 0 7.581-1.41 7.581-3.995 0-1.41-.711-2.35-2.132-3.056-1.422-.705-3.791-1.41-6.87-2.115a49.361 49.361 0 0 1-8.764-2.585c-2.369-.94-4.264-2.35-6.159-4.23-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.869-5.64 3.08-1.41 6.87-2.116 11.371-2.116 3.079 0 6.158.47 9.001 1.175 3.079.705 5.685 1.88 7.817 3.055l-7.343 8.696c-3.317-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.896 1.88-1.896 3.056 0 1.41.711 2.35 2.132 2.82 1.422.705 3.791 1.41 6.87 2.115a49.361 49.361 0 0 1 8.764 2.585c2.369.94 4.264 2.35 6.159 4.23 1.895 1.646 2.606 4.466 2.606 7.756zM87.882 19.037c0 3.76-.947 6.816-2.605 9.4-1.659 2.586-4.027 4.701-7.107 6.111s-6.87 2.116-10.896 2.116H59.22v12.69H45.955V.706h21.319c4.264 0 7.817.705 10.896 2.115 3.08 1.41 5.448 3.526 7.107 6.346 1.895 3.055 2.605 6.346 2.605 9.87zm-13.265 0c0-2.35-.71-3.995-2.132-5.17s-3.316-1.88-6.159-1.88h-7.343v14.336h7.343c2.606 0 4.738-.706 6.16-1.88s2.131-3.056 2.131-5.406zm55.904 20.212v10.576h-37.19V1.175h36.242v10.576h-23.214v8.226h18.476v10.341h-18.476v8.93zm50.218-38.074v48.65h-10.896l-20.609-25.853v25.853h-13.028V1.175h10.896l20.609 25.853V1.175zm84.092 37.604v10.81h-32.926V.94h13.265v37.604h19.661zm56.851 11.046h-13.739l-3.553-9.401h-19.661l-3.553 9.4h-13.502l20.608-48.649h13.029zM300.6 30.083l-5.922-15.512-5.922 15.512zm62.536 4.935c0 2.82-.71 5.641-2.369 7.991-1.658 2.35-3.79 4.23-6.869 5.64-3.08 1.41-6.87 2.116-11.37 2.116-3.79 0-7.344-.47-10.897-1.41s-6.396-2.35-8.527-3.996l7.106-8.46c1.421.705 2.842 1.175 4.501 1.88 2.842.94 5.448 1.41 8.054 1.41 4.974 0 7.58-1.41 7.58-3.995 0-1.41-.711-2.35-2.132-3.056-1.421-.705-3.79-1.41-6.87-2.115-3.553-.705-6.395-1.645-8.764-2.585s-4.264-2.35-6.159-4.23c-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.87-5.64 3.079-1.41 6.869-2.116 11.37-2.116 3.079 0 6.159.47 9.001 1.175 3.08.705 5.448 1.88 7.817 3.055l-7.343 8.696c-3.316-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.895 1.88-1.895 3.056 0 1.41.71 2.35 2.132 2.82 1.421.705 3.79 1.41 6.869 2.115a49.4 49.4 0 0 1 8.765 2.585c2.368.94 4.263 2.35 6.158 4.23 1.659 1.646 2.606 4.466 2.606 7.756zm-322.63-9.636c0 13.867-11.37 25.383-25.583 25.383-5.685 0-10.66-1.88-14.923-4.936l8.528-10.105c1.895 1.175 4.027 1.88 6.395 1.88 6.633 0 12.081-5.406 12.081-11.986 0-6.581-5.448-11.987-12.08-11.987-2.37 0-4.501.705-6.396 1.88L0 5.407C4.264 2.35 9.475.47 14.923.47 29.136.235 40.506 11.516 40.506 25.383zm177.66 10.341l8.528 10.107c-4.264 3.055-9.476 4.935-14.924 4.935-13.976 0-25.583-11.281-25.583-25.383C186.187 11.517 197.557 0 211.77 0c5.685 0 10.66 1.88 14.924 4.936l-8.528 10.105c-1.895-1.175-4.027-1.88-6.396-1.88-6.632 0-12.081 5.406-12.081 11.986 0 6.581 5.449 11.987 12.081 11.987 2.369.47 4.501-.235 6.396-1.41zm236.169 14.102l-10.423-15.042c3.079-1.41 5.211-3.525 6.87-6.11 1.658-2.585 2.605-5.876 2.605-9.401 0-3.76-.947-6.816-2.605-9.636-1.659-2.82-4.027-4.7-7.107-6.346-3.079-1.41-6.869-2.115-10.896-2.115H411.46v48.65h13.028V37.134h6.159l8.764 12.69zm-29.847-37.839h7.58c2.606 0 4.738.705 6.159 1.88s2.132 3.056 2.132 5.17c0 2.351-.711 3.996-2.132 5.171s-3.316 1.88-6.159 1.88h-7.58zM483.945.235c13.976 0 25.583 11.281 25.583 25.382S498.157 51 483.945 51c-13.976 0-25.583-11.281-25.583-25.383S469.732.235 483.945.235zm-13.029 25.147c0 7.051 5.685 12.692 12.792 12.692 7.106 0 12.791-5.64 12.791-12.692s-5.685-12.69-12.791-12.69c-6.87 0-12.792 5.64-12.792 12.69zM538.901.235c13.976 0 25.583 11.281 25.583 25.382S553.114 51 538.901 51c-13.976 0-25.583-11.281-25.583-25.383S524.925.235 538.901.235zm-12.792 25.147c0 7.051 5.685 12.692 12.792 12.692 7.106 0 12.791-5.64 12.791-12.692s-5.685-12.69-12.791-12.69c-7.107 0-12.792 5.64-12.792 12.69zm70.353 6.816L580.828 1.175h-10.896v48.65h11.607V28.438l11.607 21.387h6.87l11.607-21.387v21.387h11.607V1.175h-10.897z" />
+</svg>
+</a>
+</div>
+<nav class="oc-mainHeader__navWrapper" role="navigation" aria-label="Menu principal">
+<div class="oc-mainHeader__linksWrapper">
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Trainings" href="/fr/paths">Formations</a></div>
+<div class="oc-mainHeader__navLinkWrapper--separator"></div>
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Business" href="/fr/business">Pour les entreprises</a></div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="disclaimers-container" style="display:none;">
+<!--[if lt IE 10]>
+        <div class="alertMessage">
+        <span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+        <p class="alertMessage__text">
+            Vous utilisez un navigateur obsolète, veuillez le <a href="https://browser-update.org/update.html">mettre à jour</a>.
+        </p>
+    </div>
+    <![endif]-->
+
+<div id="modern-ie-disclaimer" style="display:none">
+<div class="alertMessage">
+<span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+<p class="alertMessage__text">
+Vous utilisez un navigateur obsolète, veuillez le <a href="https://browser-update.org/update.html">mettre à jour</a>.
+</p>
+</div>
+</div>
+<script id="webapp-ie-disclaimer" type="application/json">{"message":"Vous utilisez un navigateur obsol\u00e8te, veuillez le <a href=\"https:\/\/browser-update.org\/update.html\">mettre \u00e0 jour<\/a>."}</script>
+<script>
+      var isModernIE =  document.documentMode === 10 || document.documentMode === 11;
+      var isEdgeLegacy = navigator.userAgent.indexOf('Edge') > -1; // Luckily for us, Edge Chromium uses string "Edg" without final "e"
+
+      if (isModernIE || isEdgeLegacy) {
+        document.getElementById('modern-ie-disclaimer').style.display = 'block';
+        document.getElementById('webapp-ie-disclaimer').setAttribute('data-role', 'disclaimer-message-data');
+      }
+    </script>
+<noscript>
+        <div class="alertMessage">
+            <span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+            <p class="alertMessage__text">
+                Veuillez utiliser un <a href="https://browser-update.org/update.html">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+            </p>
+        </div>
+    </noscript>
+</div>
+<div id="mainContentWithHeader">
+<section class="breadcrumb  inset no-padding">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<nav class="breadcrumb__wrapper" role="navigation" aria-label="Fil d&#039;Ariane">
+<ul class="breadcrumb__trail">
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="https://openclassrooms.com/fr/" itemprop="url">
+<span itemprop="title">Accueil</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="https://openclassrooms.com/fr/courses" itemprop="url">
+<span itemprop="title">Cours</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass" itemprop="url">
+<span itemprop="title">Simplifiez-vous le CSS avec Sass</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+Créez des sélecteurs HTML avec la méthodologie BEM
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+<div id="pre-main-part">
+</div>
+<main class="claire clearfix" role="main" id="mainContent">
+<article itemscope itemtype="http://schema.org/Article" lang="fr">
+<header id="course-header" class="courseHeader" xmlns="http://www.w3.org/1999/html">
+<div class="grid-wrapper"><div class="grid-inner"><div class="grid-inner-content"><div class="courseHeader__topPart"><a itemprop="url" href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass"><h1 class="oc-typography-h2 courseHeader__title" data-course-title="Simplifiez-vous le CSS avec Sass">Simplifiez-vous le CSS avec Sass</h1></a></div></div></div></div><div class="grid-wrapper"><div class="grid-inner"><div class="grid-inner-content"><div class="courseHeader__bottomPart"><div class="courseHeader__details"><div class="courseHeader__detailsGroup"><ul class="courseHeader__detailsList"><li class="courseHeader__detailsItem"><img class="courseHeader__icon js-tooltip" src="/images/icons/schedule.svg?90a58f72" width="16" title="Ce cours demande en moyenne 15 heures de travail pour être réussi." /><span class="courseHeader__label">15 heures</span></li><li class="courseHeader__detailsItem"><i class="icon-level courseHeader__icon"></i><span class="courseHeader__label">Moyenne</span></li></ul></div><div class="courseHeader__detailsGroup courseHeader--license"><a class="courseHeader__license" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0"><span class="courseHeader__label">Licence</span><ul class="courseHeader__detailsList"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+<div id="popin-formats-availables" class="popin popin--course-formats-availables">
+<i class="popin__close-button icon-close js-close-button"></i>
+<div class="course-types course-types--withSpace">
+<a class="course-types__item" href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass">
+<i class="icon-desktop course-types__icon"></i>
+</a>
+<a class="course-types__item" href="/fr/courses?video=true">
+<i class="icon-video course-types__icon"></i>
+</a>
+<a class="course-types__item" href="/fr/courses/6106181/certificate_example" target="_blank">
+<i class="icon-badge course-types__icon js-close-button"></i>
+</a>
+</div>
+<p>Ce cours est visible <a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass">gratuitement en ligne</a>.</p>
+<p>course.header.alt.is_video</p>
+<p>
+course.header.alt.is_certifying
+</p>
+<a class="button button--primary js-close-button" href="#">J&#039;ai tout compris !</a>
+</div>
+</header>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<p class="courseHeader__updatedTime">
+Mis à jour le 25/07/2022 </p>
+</div>
+</div>
+</div>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<nav id="course-timeline" class="timeline">
+<div class="timeline__inner">
+<span class="timeline__iconContainer">
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+<i class="icon-home roundIcon__icon"></i>
+</a>
+</span>
+<div class="timeline__steps">
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595338-tirez-un-maximum-de-ce-cours" class="timeline__step" title="Tirez un maximum de ce cours">
+<span class="timeline__stepName">
+Tirez un maximum de ce cours
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595695-structurez-votre-css" class="timeline__step" title="Structurez votre CSS">
+<span class="timeline__stepName">
+Structurez votre CSS
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595809-creez-des-selecteurs-html-avec-la-methodologie-bem" class="timeline__step js-current-timeline-step" title="Créez des sélecteurs HTML avec la méthodologie BEM">
+<span class="timeline__stepName">
+Créez des sélecteurs HTML avec la méthodologie BEM
+</span>
+<span class="timeline__progressMarker"></span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596497-utilisez-les-preprocesseurs-css-pour-des-fonctionnalites-avancees" class="timeline__step" title="Utilisez les préprocesseurs CSS pour des fonctionnalités avancées">
+<span class="timeline__stepName">
+Utilisez les préprocesseurs CSS pour des fonctionnalités avancées
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596483-decouvrez-sass-et-sa-syntaxe" class="timeline__step" title="Découvrez Sass et sa syntaxe">
+<span class="timeline__stepName">
+Découvrez Sass et sa syntaxe
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596489-utilisez-les-combinateurs" class="timeline__step" title="Utilisez les combinateurs">
+<span class="timeline__stepName">
+Utilisez les combinateurs
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596494-utilisez-des-selecteurs-bem-avec-sass" class="timeline__step" title="Utilisez des sélecteurs BEM avec Sass">
+<span class="timeline__stepName">
+Utilisez des sélecteurs BEM avec Sass
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/exercises/3705" class="timeline__step" title="Quiz : Structurez et organisez votre code">
+<span class="timeline__stepName">
+Quiz : Structurez et organisez votre code
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6597580-ameliorez-la-maintenabilite-du-code-avec-les-variables-sass" class="timeline__step" title="Améliorez la maintenabilité du code avec les variables Sass">
+<span class="timeline__stepName">
+Améliorez la maintenabilité du code avec les variables Sass
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6598201-utilisez-les-mixins-sass-avec-des-arguments" class="timeline__step" title="Utilisez les mixins Sass avec des arguments">
+<span class="timeline__stepName">
+Utilisez les mixins Sass avec des arguments
+</span>
+</a>
+ <a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6598331-ecrivez-du-code-plus-propre-grace-aux-extensions-sass" class="timeline__step" title="Écrivez du code plus propre grâce aux extensions Sass">
+<span class="timeline__stepName">
+Écrivez du code plus propre grâce aux extensions Sass
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6598436-choisissez-quand-utiliser-des-mixins-ou-des-extensions" class="timeline__step" title="Choisissez quand utiliser des mixins ou des extensions">
+<span class="timeline__stepName">
+Choisissez quand utiliser des mixins ou des extensions
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6598491-ameliorez-les-mixins-avec-les-fonctions-sass" class="timeline__step" title="Améliorez les mixins avec les fonctions Sass">
+<span class="timeline__stepName">
+Améliorez les mixins avec les fonctions Sass
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6598606-optimisez-les-mixins-grace-aux-conditions-dans-sass" class="timeline__step" title="Optimisez les mixins grâce aux conditions dans Sass">
+<span class="timeline__stepName">
+Optimisez les mixins grâce aux conditions dans Sass
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6599091-creez-et-utilisez-des-fonctions" class="timeline__step" title="Créez et utilisez des fonctions">
+<span class="timeline__stepName">
+Créez et utilisez des fonctions
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/exercises/3706" class="timeline__step" title="Quiz : Révisez les techniques intermédiaires et outils de Sass">
+<span class="timeline__stepName">
+Quiz : Révisez les techniques intermédiaires et outils de Sass
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6599201-utilisez-le-systeme-7-1-pour-une-codebase-plus-simple-a-gerer" class="timeline__step" title="Utilisez le système 7-1 pour une codebase plus simple à gérer">
+<span class="timeline__stepName">
+Utilisez le système 7-1 pour une codebase plus simple à gérer
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6599386-installez-sass-sur-votre-machine" class="timeline__step" title="Installez Sass sur votre machine">
+<span class="timeline__stepName">
+Installez Sass sur votre machine
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6599971-integrez-les-types-de-donnees-sass" class="timeline__step" title="Intégrez les types de données Sass">
+<span class="timeline__stepName">
+Intégrez les types de données Sass
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6606591-utilisez-les-boucles-dans-sass-pour-fluidifier-votre-code" class="timeline__step" title="Utilisez les boucles dans Sass pour fluidifier votre code">
+<span class="timeline__stepName">
+Utilisez les boucles dans Sass pour fluidifier votre code
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6606716-ajoutez-des-breakpoints-pour-une-mise-en-page-responsive" class="timeline__step" title="Ajoutez des breakpoints pour une mise en page responsive">
+<span class="timeline__stepName">
+Ajoutez des breakpoints pour une mise en page responsive
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6612156-utilisez-autoprefixer-pour-creer-du-code-adapte-a-tous-les-navigateurs" class="timeline__step" title="Utilisez Autoprefixer pour créer du code adapté à tous les navigateurs">
+<span class="timeline__stepName">
+Utilisez Autoprefixer pour créer du code adapté à tous les navigateurs
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6612666-resume-du-cours" class="timeline__step" title="Résumé du cours">
+<span class="timeline__stepName">
+Résumé du cours
+</span>
+</a>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/exercises/3707" class="timeline__step" title="Quiz : Optimisez votre code en utilisant les techniques avancées de Sass">
+<span class="timeline__stepName">
+Quiz : Optimisez votre code en utilisant les techniques avancées de Sass
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+</div>
+<span class="timeline__iconContainer">
+<a href="/fr/courses/6106181/certificate_example" title="Certificat de réussite (voir un exemple)" class="roundIcon timeline__roundIcon">
+<i class="icon-trophy roundIcon__icon"></i>
+</a>
+</span>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="contentWithSidebar  spacer  js-contentWithSidebar  grid-inner-content">
+<div class="contentWithSidebar__content">
+<div id="js-courseRedirection" data-courseInfo-course_id="6106181"></div>
+<div class="relative js-sidebar-container">
+<div class="static">
+<h2 itemprop="name" data-part-title="Créez des sélecteurs HTML avec la méthodologie BEM" class="part-title">Créez des sélecteurs HTML avec la méthodologie BEM</h2>
+<section class="space-bottom js-desktop-sticky-container">
+<div class="tooltipMessage tooltipMessage--noArrow">
+<i class="tooltipMessage__icon  icon-lock"></i>
+<a href="/fr/login" rel="nofollow" data-callmebacktrigger data-callmeback_type="onboarding">Connectez-vous</a> ou <a href="/fr/register" rel="nofollow" data-callmebacktrigger data-callmeback_type="onboarding">inscrivez-vous</a> gratuitement pour bénéficier de toutes les fonctionnalités de ce cours !
+</div>
+<div itemprop="articleBody" data-page-indentifier="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595809-creez-des-selecteurs-html-avec-la-methodologie-bem" class="js-isRestrictablePage js-course-container js-smilize " data-video-blocked-wrapper="<a href='/fr/login#popin-log-in' class='js-popin-activator'>">
+<div class="userContent js-userContent">
+ <video id="r-7736006" data-claire-element-id="32746831" src="https://vimeo.com/534137448"><a href="https://vimeo.com/534137448">https://vimeo.com/534137448</a></video><p id="r-7191712" data-claire-element-id="31506562">Soyons honnêtes, <strong>vous passerez plus de temps à lire votre code qu’à l’écrire</strong>. Il vous faudra souvent vous replonger dedans et le parcourir à la recherche d’un élément à modifier, ou juste pour vous rappeler comment fonctionne tel ou tel élément.</p><p id="r-6595697" data-claire-element-id="31430452">Lorsque vous écrivez du code, il est primordial de le faire en anticipant l’évolution de votre projet et ce qu’il pourrait devenir. D'ici quelque temps, il est possible que vous auriez oublié la raison de l'appel de ce sélecteur  <code data-claire-semantic="text"> .btn-alt</code>  et encore moins à quoi il sert.</p><p id="r-6595698" data-claire-element-id="30080811">Avoir la possibilité de jeter un coup d’œil à un nom de classe et savoir immédiatement le rôle de votre classe et comment elle interagit avec d’autres éléments nous ferait gagner beaucoup de temps et d’énergie à l’avenir, n’est-ce pas ?</p><h3 id="r-6641068" data-claire-element-id="32746851">Apprenez-en un peu plus sur BEM</h3><p id="r-6595699" data-claire-element-id="30080812">Eh bien, pour répondre à cette problématique, je vous présente <strong>BEM</strong>, une convention CSS qui va nous aider à rendre nos classes plus compréhensibles, et ce grâce au <strong>nommage</strong>.</p><aside id="r-6597087" data-claire-element-id="30080814" data-claire-semantic="information"><p id="r-6595700" data-claire-element-id="30080813">Le nommage vient du terme <strong><em>naming</em></strong> en anglais, qui est le fait d’identifier une caractéristique en lui attribuant un nom. Lorsque vous voyez un grand nombre d’arbres, vous appelez ça une forêt. C’est du naming !  </p></aside><p id="r-6595701" data-claire-element-id="30080815">BEM est l’acronyme de <em><strong>bloc, élément, modificateur</strong></em>. En assignant chaque sélecteur que vous écrivez à l’une de ces trois catégories, vous êtes en mesure de définir sa fonctionnalité et ses relations, tout en le nommant correctement, et de définir un sélecteur comme un bloc, élément ou modificateur.</p><p id="r-6595702" data-claire-element-id="30000982">Pas mal, non ? Mais que sont au juste les blocs, éléments et modificateurs ?</p><h4 id="r-6641058" data-claire-element-id="32746838"><strong>Construisez des blocs</strong></h4><p id="r-6595703" data-claire-element-id="30080816">Un bloc est un composant, ou une section d’une page qui est <strong>autonome et peut fonctionner indépendamment du reste de la page</strong>. Cela peut être un header, un footer, un conteneur, un menu ou même un bouton. Le but est simple : vous pourriez supprimer tout ce qu’il y a autour de votre bloc et vous pourriez toujours comprendre de quoi il s’agit. </p><p id="r-6595704" data-claire-element-id="30003575">Rappelez-vous, dans l’introduction, je vous parlais de construire un portfolio. Jetons-y un œil. Nous avons un logo, une barre de navigation, une citation et une grille de projets.</p><figure id="r-6641053" data-claire-element-id="32746833"><img id="r-6597088" data-claire-element-id="30003576" src="https://user.oc-static.com/upload/2019/10/09/15706237955338_image4.png" alt="La page d’accueil du portfolio servant d'exemple" /><figcaption>La page d’accueil du portfolio servant d'exemple</figcaption></figure><p id="r-6595705" data-claire-element-id="30080843">Si on supprimait tout sauf le titre d’un projet, ça n’aurait plus trop de sens en soi. Le titre ne serait alors qu’un bout de texte isolé, sans aucun lien avec le reste.</p><figure id="r-6641055" data-claire-element-id="32746835"><img id="r-6597091" data-claire-element-id="30003580" src="https://user.oc-static.com/upload/2019/10/09/15706238427329_image5.png" alt="Image montrant un morceau isolé du site appelé le titre du projet" /><figcaption>Le titre, oui, mais le titre de quoi… ?</figcaption></figure><p id="r-6597094" data-claire-element-id="30080846">Mais si nous isolons l’aperçu entier d’un projet (le titre, l’image, la description) : ça fonctionne. On a une image avec un titre et une description, on comprend de quoi il s’agit. Cela signifie que dans la terminologie BEM, notre preview de projet est un <strong>bloc</strong> !</p><figure id="r-6641057" data-claire-element-id="32746837"><img id="r-6597095" data-claire-element-id="30003584" src="https://user.oc-static.com/upload/2019/10/09/15706238999699_image2.png" alt="Image montrant le bloc projet" /><figcaption>Aperçu du projet</figcaption></figure><p id="r-6597098" data-claire-element-id="30080897">On nomme un bloc en décrivant sa <strong>fonction</strong>. Nommons notre bloc pour notre aperçu de projet  <code data-claire-semantic="text">.proj-prev</code>  (prev pour <em>preview</em> ou <em>aperçu</em> en français), en y assignant uniquement les règles qui sont spécifiques à la configuration de ce bloc en particulier.</p><p id="r-6595714" data-claire-element-id="30003588">Nous pouvons définir que le texte soit blanc pour tous les éléments utilisés dans notre bloc. En assignant ce paramètre au bloc, tous ses éléments hériteront de cette couleur. Nous devons aussi définir une marge pour le bas du bloc.</p><h5 id="r-6597100" data-claire-element-id="30081068"><strong>CSS</strong></h5><pre id="r-6597099" data-claire-element-id="30003589"><code data-claire-semantic="scss">.proj-prev {
+  color: #fff;
+  margin-bottom: .25rem;
+}</code></pre><p id="r-6595717" data-claire-element-id="30081067">Nous avons utilisé le sélecteur <code data-claire-semantic="text">.proj-prev</code>  pour définir la  forme de notre bloc : il a une petite marge en bas et le texte est blanc. Peu importe ce que vous ajoutez dans votre aperçu de projet, le texte sera blanc et il y aura une marge en bas. Nous avons donc un morceau de code réutilisable, ce qui nous permet d’avoir une codebase bien ordonnée, tout en assurant une certaine cohérence graphique et qui, bonus, suit le principe <strong>DRY </strong>(vous vous en souvenez ? 😉). </p><h4 id="r-6641061" data-claire-element-id="32746841"><strong>Créez des éléments</strong></h4><p id="r-6595719" data-claire-element-id="31156589">Maintenant, est-ce que vous vous souvenez de ce bout de texte pour le titre du projet qui ne fonctionnait pas tout seul ? Il ne peut pas fonctionner de façon autonome, mais en revanche il fait partie intégrante du bloc : il s’agit d’un <strong>élément</strong> de ce bloc.</p><figure id="r-6641060" data-claire-element-id="32746840"><img id="r-6597110" data-claire-element-id="30003610" src="https://user.oc-static.com/upload/2019/10/09/15706240250407_image12.png" alt="Image montrant un bloc et un élément" /><figcaption>Le titre du projet est un élément du bloc</figcaption></figure><p id="r-6595722" data-claire-element-id="30003613">Le nom d’un élément doit indiquer deux choses :</p><ul id="r-6595729" data-claire-element-id="30081075"><li id="r-6595726" data-claire-element-id="30003615"><p id="r-6595725" data-claire-element-id="30003614">son <strong>bloc parent</strong>, suivi d’un <strong>double underscore</strong> (aussi appelé “dunders”) ;</p></li><li id="r-6595728" data-claire-element-id="30081074"><p id="r-6595727" data-claire-element-id="30081073">la <strong>fonction</strong> de l’élément. Comme c’est le titre de notre projet, on va le nommer  <code data-claire-semantic="text">.proj-prev__heading</code> et lui assigner l’ensemble de règles qui suit.</p></li></ul><p id="r-6595730" data-claire-element-id="30001010"><strong>CSS</strong></p><pre id="r-6597145" data-claire-element-id="30003700"><code data-claire-semantic="scss">.proj-prev__heading {
+  font-size: 4rem;
+  padding-left: 2.5rem;
+  margin: 0;
+  line-height: 6rem;
+}</code></pre><p id="r-6595732" data-claire-element-id="30001012">Nous avons vu les blocs et les éléments, passons à présent aux <strong>modificateurs</strong> !</p><h4 id="r-6641067" data-claire-element-id="32746850"><strong>Élaborez des modificateurs</strong></h4><p id="r-6595734" data-claire-element-id="30001014">Les modificateurs modifient l’apparence d’un bloc mais aussi d’un élément. Voyez-les comme des <strong>sélecteurs qui créent différentes versions d’un bloc ou d’un élément</strong>. Besoin de changer la taille, la couleur, la police, etc. d’un élément, tout en le gardant tel quel ? C’est un modificateur qu’il vous faut !</p><p id="r-6595735" data-claire-element-id="32746842">Imaginons que vous vouliez faire les choses un peu différemment pour certains projets, histoire de les faire ressortir. La couleur de base du texte pour le bloc est le blanc, mais pour certains projets, vous voudriez les mettre en valeur en utilisant un fond vert clair.</p><p id="r-6595736" data-claire-element-id="32746843">Pour cela, vous allez créer un modificateur pour votre bloc <code data-claire-semantic="text">.proj-prev</code>. Pour nommer le <strong>modificateur</strong>, vous devez préciser le <strong>bloc</strong> (ou l’élément) qu’il modifie, y ajouter <strong>deux tirets</strong> suivi du style graphique de votre modificateur. Puisque vous êtes en train de modifier le bloc  <code data-claire-semantic="text">.proj-prev</code>  pour lui donner un fond vert couleur menthe, vous pouvez l’appeler  <code data-claire-semantic="text">.proj-prev--mint</code>  et lui attribuer une couleur.</p><h5 id="r-6597147" data-claire-element-id="30003705"><strong>CSS</strong></h5><pre id="r-6597146" data-claire-element-id="30003703"><code data-claire-semantic="scss">.proj-prev--mint {
+  color: #15DEA5;
+}</code></pre><p id="r-6595738" data-claire-element-id="30003704">Et l’appliquer au bloc HTML.</p><h5 id="r-6641066" data-claire-element-id="32746849"><strong>HTML</strong></h5><pre id="r-6597160" data-claire-element-id="30069751"><code data-claire-semantic="html">&lt;section class=&quot;proj-prev proj-prev--mint&quot;&gt;
+  &lt;div class=&quot;proj-prev__image&quot;&gt;
+      &lt;img src=&quot;/public/img/photography_1280w.jpg&quot; alt=&quot;project title goes here&quot; &gt;
+  &lt;/div&gt;
+  &lt;h1 class=&quot;proj-prev__heading&quot;&gt;
+      Project Title
+  &lt;/h1&gt;
+  &lt;p class=&quot;proj-prev__byline&quot;&gt;
+      project keywords would go here
+  &lt;/p&gt;
+&lt;/section&gt;</code></pre><p id="r-6595741" data-claire-element-id="32746844">Et quand on regarde le rendu du HTML, on voit qu’il y a bel et bien un projet qui ressort avec un fond couleur menthe sans modifier les autres  🎉 :</p><figure id="r-6641063" data-claire-element-id="32746846"><img id="r-6597161" data-claire-element-id="30003752" src="https://user.oc-static.com/upload/2019/10/09/15706242548401_image8.png" alt="Nous avons modifié la couleur du texte pour un seul des blocs" /><figcaption>Nous avons modifié la couleur de fond pour un seul des blocs</figcaption></figure><p id="r-6597164" data-claire-element-id="30003755">Voici toute la page d’accueil, séparée en blocs, éléments et modificateurs :</p><figure id="r-6641065" data-claire-element-id="32746848"><img id="r-6597165" data-claire-element-id="30003756" src="https://user.oc-static.com/upload/2019/10/09/15706242907473_image9.png" alt="Notre page d’accueil divisée en blocs, éléments et modificateurs" /><figcaption>Notre page d’accueil divisée en blocs, éléments et modificateurs</figcaption></figure><p id="r-6595745" data-claire-element-id="30081082">Quand vous construisez vos pages, imaginez que vous empilez des boîtes dans des boîtes en les dessinant, ça vous aidera à mieux visualiser votre structure HTML. 😉</p><h3 id="r-6641071" data-claire-element-id="31512488">Créez votre propre barre de navigation avec BEM</h3><p id="r-6595751" data-claire-element-id="30003763">Maintenant que nous avons passé en revue les fondamentaux de BEM, mettons-les en application en créant une <strong>barre de navigation</strong> avec nos nouveaux  sélecteurs.🤘</p><pre id="r-6597168" data-claire-element-id="30003764"><code data-claire-semantic="html">&lt;nav class=&quot;nav&quot;&gt;
+  &lt;ul&gt;
+      &lt;li class=&quot;nav__link nav__link--active&quot;&gt;work&lt;/li&gt;
+      &lt;li class=&quot;nav__link&quot;&gt; &lt;a href=&quot;/about.html&quot;&gt;about&lt;/a&gt; &lt;/li&gt;
+      &lt;li class=&quot;nav__link&quot;&gt; &lt;a href=&quot;/contact.html&quot;&gt;contact&lt;/a&gt;  &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre><p id="r-6595753" data-claire-element-id="30001033">Notez bien, c’est important : les sélecteurs BEM sont <strong>toujours</strong><strong> implémentés sous forme de classes</strong>.</p><div id="r-6597169" data-claire-element-id="30003765" data-claire-semantic="question"><p id="r-6595754" data-claire-element-id="30001034">Mais pourquoi ? 🤔</p></div><p id="r-6595755" data-claire-element-id="30081158">Pour pouvoir appliquer les modificateurs avec des résultats cohérents, vous devez être sûr que <strong>vos sélecteurs ont une spécificité aussi basse que possible</strong>. Si vous assignez le sélecteur de bloc avec un id au lieu d’une classe, sa spécificité prendra automatiquement le dessus sur tous les modificateurs assignés en tant que classe.</p><p id="r-6595756" data-claire-element-id="30081248">Rappelez-vous, dans le chapitre précédent nous avons vu que quand le navigateur interprète vos éléments, il cherche d’abord les <strong>classes locales</strong>, puis les id, puis les classes, et enfin les éléments. S’il croise un sélecteur attaché à un id, celui-ci prendra le dessus sur toute règle potentiellement contradictoire provenant d’une classe. Or, le but d’un <strong>modificateur</strong> est d’introduire une <strong>règle </strong><strong>contradictoire</strong>, comme une couleur ou une taille de police différente, et que celle-ci annule la règle originelle ; c’est pourquoi on utilise toujours des classes pour implémenter des sélecteurs BEM !</p><p id="r-6595757" data-claire-element-id="30001037">Jetons à présent un œil au CSS de notre barre de navigation :</p><h5 id="r-6597172" data-claire-element-id="30081254"><strong>CSS</strong></h5><pre id="r-6597170" data-claire-element-id="30003767"><code data-claire-semantic="scss">.nav {
+  padding-right: 6rem;
+  text-align: right;
+}
+
+.nav__link {
+  display: inline;
+  font-size: 3rem;
+  padding-left: 1.5rem;
+
+}
+
+ 
+
+.nav__link a {
+  text-decoration: none;
+  color: #D6FFF5;
+}
+
+ 
+
+.nav__link--active {
+  color: #001534;
+}
+
+ 
+
+.nav__link a:hover {
+  color: #fff;
+}</code></pre><p id="r-6595768" data-claire-element-id="30081249">Pendant que nous essayons de garder une spécificité basse pour notre sélecteur, les pseudoclasses, comme par exemple <code data-claire-semantic="text">:hover</code>, et les <strong>combinateurs</strong>, tels que les combinateurs descendants, peuvent parfaitement être utilisés. </p><div id="r-6597171" data-claire-element-id="30081251" data-claire-semantic="question"><p id="r-6595769" data-claire-element-id="30081250">Pause pause pause ! Combinateurs descen... quoi ? 😅</p></div><p id="r-6595770" data-claire-element-id="30081252">Un <strong>combinateur descendant</strong>, aussi appelé <em>sélecteur d’éléments descendant</em>, permet de sélectionner les éléments qui dépendent d’un sélecteur. Il est matérialisé par un ou plusieurs espaces. Par exemple,  <code data-claire-semantic="text">div span</code> permet de cibler n’importe quel span dans un élément div.</p><p id="r-6595771" data-claire-element-id="30003799">Les combinateurs descendants vont <strong>augmenter</strong> la spécificité du sélecteur, mais ils peuvent aussi contribuer à créer du <strong>code plus propre et plus lisible</strong> en diminuant le besoin d’assigner une classe à <em>chaque élément de la page</em>.😱</p><p id="r-6595772" data-claire-element-id="30003800">En CSS, les combinateurs, peu importe leur type, sélectionnent les éléments en fonction de leur relation à un élément défini.</p><p id="r-6597182" data-claire-element-id="30081253">Prenons une liste non ordonnée,  <code data-claire-semantic="text">&lt;ul&gt;</code>, et les items de cette liste,  <code data-claire-semantic="text">&lt;li&gt;</code>. Plutôt que de créer un sélecteur de classe pour le  <code data-claire-semantic="text">&lt;li&gt;</code>  et de l’appliquer à chacun des items, vous pouvez appliquer un <strong>combinateur enfant</strong> qui sélectionnera tous les enfants directs du  <code data-claire-semantic="text">&lt;ul&gt;</code>.</p><h5 id="r-6597184" data-claire-element-id="30081279"><strong>CSS</strong></h5><pre id="r-6597183" data-claire-element-id="30003803"><code data-claire-semantic="scss">ul.list {
+  list-style:none;
+}
+
+ 
+
+ul.list &gt; li {
+  font-weight: 100;
+  color: #001534;
+}</code></pre><p id="r-6595778" data-claire-element-id="30081278">Ce qui donne un HTML beaucoup plus propre que d’appliquer une classe à chaque <code data-claire-semantic="text">&lt;li&gt;</code> :</p><h5 id="r-6641070" data-claire-element-id="31512484"><strong>HTML</strong></h5><pre id="r-6597185" data-claire-element-id="30003806"><code data-claire-semantic="html">&lt;ul class=&quot;list&quot;&gt;
+  &lt;li&gt;List Item&lt;/li&gt;
+  &lt;li&gt;List Item&lt;/li&gt;
+  &lt;li&gt;List Item&lt;/li&gt;
+&lt;/ul&gt;</code></pre><aside id="r-6597187" data-claire-element-id="30003808" data-claire-semantic="information"><p id="r-6597186" data-claire-element-id="30003807">Ne faites pas trop attention au combinateur enfant, on en parlera plus en détail dans un prochain chapitre. </p></aside><p id="r-6595781" data-claire-element-id="31512483">BEM nous a aidé à rendre notre CSS beaucoup mieux organisé et plus efficace, et notre HTML plus propre et lisible, en définissant clairement la fonction des sélecteurs. Mais notre CSS n’en reste pas moins un gros amas de code sans forme.</p><h4 id="r-7193571" data-claire-element-id="31512487"><strong>Essayez par vous-même !</strong></h4><p id="r-7193570" data-claire-element-id="31512486"><img id="r-7193569" data-claire-element-id="31512485" src="https://user.oc-static.com/upload/2021/04/14/16183911506509_A-vous-de-jouer%20%282%29.png" alt="16183911506509_A-vous-de-jouer%20%282%29.png" /></p><p id="r-6597188" data-claire-element-id="30003810">Adaptez le code fourni en utilisant la méthode BEM.</p><p id="r-6641069" data-claire-element-id="30124559"><a href="https://api.next.tech/api/v1/publishable_key/2A9CAA3419124E3E8C3F5AFCE5306292?content_id=a0ab65fb-062c-47c1-9cf5-f8979c45d0e7">https://api.next.tech/api/v1/publishable_key/2A9CAA3419124E3E8C3F5AFCE5306292?content_id=a0ab65fb-062c-47c1-9cf5-f8979c45d0e7</a></p><aside id="r-7191924" data-claire-element-id="31507220" data-claire-semantic="information"><p id="r-7191923" data-claire-element-id="31507219">Comparez votre exercice avec <a href="https://github.com/tdimnet/Simplifiez-vous-le-CSS-avec-Sass/tree/partie-1/chapitre-3%2Fexercice-1">la correction</a> !</p></aside><h3 id="r-6595808" data-claire-element-id="31507259"><strong>En résumé</strong></h3><ul id="r-6595805" data-claire-element-id="31507257"><li id="r-6595795" data-claire-element-id="31507250"><p id="r-6595787" data-claire-element-id="31507249">BEM signifie <em>bloc, élément, modificateur</em> :</p><ul id="r-6595794" data-claire-element-id="30081290"><li id="r-6595789" data-claire-element-id="30081285"><p id="r-6595788" data-claire-element-id="30081284">les blocs sont des bouts de code autonomes ;</p></li><li id="r-6595791" data-claire-element-id="30081287"><p id="r-6595790" data-claire-element-id="30081286">les éléments sont les parties qui forment le bloc ;</p></li><li id="r-6595793" data-claire-element-id="30081289"><p id="r-6595792" data-claire-element-id="30081288">les modificateurs changent l’apparence ou le comportement d’un bloc ou d’un élément.</p></li></ul></li><li id="r-6595800" data-claire-element-id="31507252"><p id="r-6595796" data-claire-element-id="31507251">Les blocs sont nommés en fonction de leur rôle :</p><ul id="r-6595799" data-claire-element-id="31282344"><li id="r-6595798" data-claire-element-id="31282343"><p id="r-6595797" data-claire-element-id="31282342">les éléments indiquent le nom de leur bloc parent, suivi d’un double underscore/dunder (__) puis du rôle de l’élément : form__label.</p></li></ul></li><li id="r-6595802" data-claire-element-id="31507254"><p id="r-6595801" data-claire-element-id="31507253">Les modificateurs utilisent le nom du bloc ou de l’élément qu’ils modifient, suivi de deux tirets (--) et de ce que le sélecteur modifie : button--green.</p></li><li id="r-6595804" data-claire-element-id="31507256"><p id="r-6595803" data-claire-element-id="31507255">Vous n’avez pas besoin d’attribuer à chaque élément d’une page web un sélecteur de classe. Vous pouvez utiliser les sélecteurs pour que votre code HTML soit plus propre et concis.</p></li></ul><p id="r-6595806" data-claire-element-id="31507258"><em>Le chapitre suivant va vous présenter des outils qui donneront plus de structure visuelle à votre CSS, tout en vous facilitant la vie au passage. Préparez-vous à plonger dans le monde des préprocesseurs CSS et de Sass !</em> </p>
+</div>
+<div class="js-courseSelementActions sideActions">
+<ul class="sideActions__container">
+<li>
+<a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip" href="#" data-tooltip="Copier le lien" data-tooltip-done="Lien copié !">
+#
+</a>
+</li>
+</ul>
+</div>
+</div>
+<nav id="course-pagination" class="course-pagination    clearfix">
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595695-structurez-votre-css" class="button button--secondary  course-pagination__btn course-pagination__btn--previous">
+<i class="icon-previous"></i>
+<span>Structurez votre CSS</span>
+</a>
+<span class="course-pagination__separator"></span>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596497-utilisez-les-preprocesseurs-css-pour-des-fonctionnalites-avancees" class="button button--secondary  course-pagination__btn course-pagination__btn--next">
+<span>Utilisez les préprocesseurs CSS pour des fonctionnalités avancées</span>
+<i class="icon-next"></i>
+</a>
+</nav>
+<div tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="popin-view-restriction_popin_title" class="popin popin--illustrated  js-popin" id="popin-view-restriction">
+<button class="popin__close-button  js-close-button" title="Fermer" aria-label="Fermer">
+<i class="icon-close" aria-hidden="true"></i>
+</button>
+<div class="popin__inner">
+<div class="popin__illustrationWrapper">
+<div class="popin__illustration illustration--balloon"></div>
+</div>
+<div class="popin__mainContainer">
+<div class="popin__gigTitleContainer js-popin-title">
+<div class="gigWorkersPopin__timeline">
+<div class="gigWorkersPopin__dot">1</div>
+<div class="gigWorkersPopin__line"></div>
+<div class="gigWorkersPopin__dot gigWorkersPopin__dot--disabled">2</div>
+</div>
+<div class="popin__title">Créez un compte <br /> OpenClassrooms</div>
+</div>
+<div id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</div>
+<div class="popin__content  js-popin-content">
+<div class="popin__contentWrapper">
+<p>
+Très heureux de voir que nos cours vous plaisent, déjà 5 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+</p>
+<p>
+Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres membres.
+</p>
+</div>
+</div>
+<div class="popin__actions  js-popin-actions">
+<span class="u--inlineBlock">
+<a class="button button--primary " href="/fr/register">S'inscrire</a>
+ </span>
+<span class="u--inlineBlock">
+<a class="button button--secondary " href="/fr/login">Se connecter</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script type="text/template" class="js-single-video-download-info">
+            <div class="videoDownload js-download-video-popin-link">
+                <a href="#popin-download-video" class="js-popin-activator">
+                    <i class="icon-download videoDownload__icon"></i> Télécharger la vidéo
+                </a>
+            </div>
+        </script>
+<script type="text/template" class="js-all-video-download-info">
+            <div class="videoDownload js-download-video-popin-link">
+                <a href="#popin-download-all-videos" class="js-popin-activator">
+                    <i class="icon-download videoDownload__icon"></i> Télécharger toutes les vidéos de ce cours
+                </a>
+            </div>
+        </script>
+<div id="popin-not-certifying-yet_708291" class="popin" data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <span><i class='icon-star'></i> Devenez Premium</span>
+                    ">
+<img alt="Exemple de certificat de réussite" src="//static.oc-static.com/prod/images/courses/certif.jpg" />
+</div>
+<div tabindex="-1" role="dialog" aria-hidden="true" class="popin popin--small  js-popin" id="popin-download-video">
+<button class="popin__close-button  js-close-button" title="Fermer" aria-label="Fermer">
+<i class="icon-close" aria-hidden="true"></i>
+</button>
+<div class="popin__inner">
+<div class="popin__mainContainer">
+<div class="popin__gigTitleContainer js-popin-title">
+<div class="gigWorkersPopin__timeline">
+<div class="gigWorkersPopin__dot">1</div>
+<div class="gigWorkersPopin__line"></div>
+<div class="gigWorkersPopin__dot gigWorkersPopin__dot--disabled">2</div>
+</div>
+<div id="popin-download-video_popin_title" class="popin__title">Créez un compte <br /> OpenClassrooms</div>
+</div>
+<i class="icon-video popin__icon  js-popin-icon"></i>
+<div class="popin__content  js-popin-content">
+<div class="popin__contentWrapper">
+<p>
+Le téléchargement des vidéos de nos cours est accessible pour les membres Premium. Vous pouvez toutefois les visionner en streaming gratuitement.
+</p>
+</div>
+</div>
+<div class="popin__actions  js-popin-actions">
+<a class="button button--primary js-close-button" href="#">Devenez Premium</a>
+</div>
+</div>
+</div>
+</div>
+<div id="popin-not-certifying-yet_141915" class="popin" data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <span><i class='icon-star'></i> Devenez Premium</span>
+                    ">
+<img alt="Exemple de certificat de réussite" src="//static.oc-static.com/prod/images/courses/certif.jpg" />
+</div>
+<div tabindex="-1" role="dialog" aria-hidden="true" class="popin popin--small  js-popin" id="popin-download-video">
+<button class="popin__close-button  js-close-button" title="Fermer" aria-label="Fermer">
+<i class="icon-close" aria-hidden="true"></i>
+</button>
+<div class="popin__inner">
+<div class="popin__mainContainer">
+<div class="popin__gigTitleContainer js-popin-title">
+<div class="gigWorkersPopin__timeline">
+<div class="gigWorkersPopin__dot">1</div>
+<div class="gigWorkersPopin__line"></div>
+<div class="gigWorkersPopin__dot gigWorkersPopin__dot--disabled">2</div>
+</div>
+<div id="popin-download-video_popin_title" class="popin__title">Créez un compte <br /> OpenClassrooms</div>
+</div>
+<i class="icon-video popin__icon  js-popin-icon"></i>
+<div class="popin__content  js-popin-content">
+<div class="popin__contentWrapper">
+<p>
+Le téléchargement des vidéos de nos cours est accessible pour les membres Premium. Vous pouvez toutefois les visionner en streaming gratuitement.
+</p>
+</div>
+</div>
+<div class="popin__actions  js-popin-actions">
+<a class="button button--primary js-close-button" href="#">Devenez Premium</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside id="content-with-sidebar" class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement">
+<nav class="col-nav">
+<div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+<div class="col-nav__block  col-nav__block--summary">
+<div class="side-paginate">
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595695-structurez-votre-css" class="side-paginate__previous" title="Chapitre précédent">
+<i class="icon-previous"></i>
+</a>
+<span class="side-paginate__separator"></span>
+<h6 class="side-paginate__title">
+Structurez et organisez votre code
+</h6>
+<span class="side-paginate__separator"></span>
+<a href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596497-utilisez-les-preprocesseurs-css-pour-des-fonctionnalites-avancees" class="side-paginate__next" title="Chapitre suivant">
+<i class="icon-next"></i>
+</a>
+</div>
+<div class="col-nav__block--summary-list">
+<ol class="col-nav__chapters">
+<li class="">
+<a class="col-nav__chapterTitle" href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595338-tirez-un-maximum-de-ce-cours">Tirez un maximum de ce cours</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6595695-structurez-votre-css">Structurez votre CSS</a>
+</li>
+<li class="selected">
+<span class="col-nav__chapterTitle">Créez des sélecteurs HTML avec la méthodologie BEM</span>
+</li>
+ <li class="">
+<a class="col-nav__chapterTitle" href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596497-utilisez-les-preprocesseurs-css-pour-des-fonctionnalites-avancees">Utilisez les préprocesseurs CSS pour des fonctionnalités avancées</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596483-decouvrez-sass-et-sa-syntaxe">Découvrez Sass et sa syntaxe</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596489-utilisez-les-combinateurs">Utilisez les combinateurs</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/6596494-utilisez-des-selecteurs-bem-avec-sass">Utilisez des sélecteurs BEM avec Sass</a>
+</li>
+</ol>
+<div class="tocExercise"><ul class="tocExercise__list"><li class="tocExercise__item "><a class="tocExercise__link " href="/fr/courses/6106181-simplifiez-vous-le-css-avec-sass/exercises/3705"><i class="tocExercise__icon icon-lock"></i><span class="tocExercise__text">Quiz : Structurez et organisez votre code</span></a></li></ul></div> </div>
+</div>
+<div class="socialNetwork col-nav__block">
+<ul class="socialButtons  js-socialButtons" data-options="
+                title: 'Créez des sélecteurs HTML avec la méthodologie BEM @OCFrance',
+        mailTitle: 'Cours &quot;Créez des sélecteurs HTML avec la méthodologie BEM&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;Créez des sélecteurs HTML avec la méthodologie BEM&quot; sur OpenClassrooms.'">
+<li>
+<a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter">
+<i class="roundIcon__icon  icon-twitter"></i>
+</a>
+</li>
+<li>
+<a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+<i class="roundIcon__icon  icon-facebook"></i>
+</a>
+</li>
+<li>
+<a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+<i class="roundIcon__icon  icon-letter"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</aside>
+</div>
+</div>
+</div>
+<footer id="course-footer" class="alt-section noMarginBottom">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content  courseFooter">
+<div class="courseFooter__authorsOnly course-bottom__category">
+<div class="course-bottom__title">
+Le professeur
+</div>
+<div>
+ <div class="course-bottom__text-illustrated">
+<span data-author="Kassandre Pedro" data-image-cdn-background-image="https://user.oc-static.com/users/avatars/15710625132388_Screen%20Shot%202019-10-14%20at%2016.15.04.png" data-image-cdn-width="120"></span>
+<div class="course-bottom__subtitle" itemprop="name">Kassandre Pedro</div>
+<p itemprop="description">
+Backend Developer at Pexels | Ruby on Rails Developer | Ancienne CTO et Co-fondatrice de Seacher
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</article>
+</main>
+</div>
+<div id="mainSearchLegacy" class="mainSearch"></div>
+<div id="footerWrapper">
+<footer id="footer" class="oc-footerSkeleton">
+<hr style="margin-bottom: 8px" />
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="oc-footerSkeleton__container">
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 80%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 70%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 60%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 65%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 85%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 60%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 75%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 65%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 50%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<span class="skeleton" style="height: 25px; width: 65%"></span>
+<div class="oc-footerSkeleton__socialButtonWrapper">
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+</div>
+<div><span class="skeleton skeleton--width50" style="height: 40px;"></span></div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div id="showDisclaimer" class="cookiesDisclaimer"></div>
+<script>
+  var isPrerender = !!navigator.userAgent.match(/github\.com\/prerender\/prerender/);
+  var preRenderBrowserFakeUa = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163 Safari/537.36";
+  var polyfillFeatures = [
+    'default',
+    'es6',
+    'IntersectionObserver',
+    'Object.values',
+    'Array.prototype.includes',
+    'Array.prototype.findIndex',
+    'Array.prototype.find',
+    'Array.from',
+    'Promise.prototype.finally',
+    'fetch',
+    'String.prototype.includes',
+    'Object.entries',
+    'Array.prototype.entries',
+    'Array.prototype.flat',
+    'Intl.~locale.fr'
+  ];
+  var polyfillUrl = "https://cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&features=" + polyfillFeatures.join(',');
+
+    if (isPrerender) {
+    polyfillUrl+= "&ua=" + encodeURIComponent(preRenderBrowserFakeUa);
+  }
+
+  App.translations = {};
+
+  App.scripts.push(polyfillUrl);
+
+  App.script = {
+      DASHBOARD: 'dashboard',
+      MENTORSHIP_STUDENT_DASHBOARD: 'mentorshipStudentdashboard',
+      SHOP: 'shop',
+      PAYMENT: 'payment',
+      PROJECTS: 'projects',
+      TEAM: 'team',
+      COURSE_EDIT: 'course_edit',
+      COURSE_VIEW: 'course_view',
+      ADMIN: 'admin',
+      ADMIN_STUDENT_CREDENTIAL: 'adminStudentCredential',
+      ADMIN_STUDENT_CREDENTIAL_EDIT: 'adminStudentCredentialEdit',
+      POST_A_JOB: 'postAJob',
+      GIG_WORKERS: 'gigWorkers',
+      JOB_SURVEY: 'jobSurvey',
+      MCQ_EDIT: 'mcqEdit',
+      MCQ_VIEW: 'mcqView',
+      MENTOR_EDIT: 'mentorEdit',
+    PATHS: 'paths',
+    PRIVATE_CONVERSATIONS: 'privateConversations',
+    USER_PROFILE: 'userProfile',
+    WELCOME: 'welcome',
+    APPRENTICESHIP: 'apprenticeship',
+    WEBAPP: 'webapp',
+    PROJECTS_ADMIN: 'projectsAdmin',
+    SECURITY: 'security',
+  };
+
+  App.scripts.push("/js/index.12ba6d303cee93b08c73.js");
+</script>
+<script type="text/javascript">
+        function getConsentedSegmentIntegrations() {
+            // getCookie from https://www.w3schools.com/js/js_cookies.asp
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) === 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            var consent = getCookie('cmapi_cookie_privacy');
+
+            function isCookieAllowedByConsent(consent, level) {
+              return !!consent && consent.search(level) !== -1;
+            }
+
+            var isFunctionalCookieAllowed = isCookieAllowedByConsent(consent, 2);
+            var isAdvertisingCookieAllowed = isCookieAllowedByConsent(consent, 3);
+
+            var isAppCuesPremiumUser = false;
+
+            var isOnPoleEmploiPage = !!window && window.location.pathname.indexOf('partners/pole-emploi/offers') >= 0;
+
+            return {
+                Amplitude: isFunctionalCookieAllowed,
+                'Bing Ads': isAdvertisingCookieAllowed,
+                'Google Ads': isAdvertisingCookieAllowed,
+                'Google Analytics': isFunctionalCookieAllowed,
+                'Zendesk': isFunctionalCookieAllowed,
+                Appcues: (isAppCuesPremiumUser || isOnPoleEmploiPage) && isFunctionalCookieAllowed,
+            };
+        }
+
+        var consentedSegmentIntegrations = getConsentedSegmentIntegrations();
+
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.15.2";
+            window.loadAnalytics = function () { window.analytics.load('v1q5MEqEX06PGmFJJeTpNNf57U3tQw5Z', {integrations: consentedSegmentIntegrations}) };
+        }}();
+    </script>
+
+<script>App.scriptToLoad = App.script.COURSE_VIEW</script>
+
+<script>
+    (function () {
+        function loadScripts(cb) {
+            App.scripts.forEach(function (src, index) {
+                var script = document.createElement('script');
+                script.src = src;
+                script.async = false;
+                document.body.appendChild(script);
+
+                if (cb && index === App.scripts.length - 1) {
+                    script.onload = cb;
+                }
+            });
+        }
+
+        function boot() {
+            loadScripts(function () {
+                if (App.modules) {
+                    App.modules.startAll();
+                }
+            });
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener('load', boot, false);
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', boot);
+        } else {
+            window.onload = boot;
+        }
+    }());
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"778a2972c8400da0","token":"8e698008242e427fae12788d79d12ecf","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
