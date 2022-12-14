@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet HI-TECH</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b48549a02e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="background">
    <header class="header">
         <div class="header_container">
             <div class="theme  flex align-center ">
@@ -26,8 +27,8 @@
                 
             </div>
             
-            <div class="flex1  align-center">
-                <div class="logo flex align-center ">
+            <div class="flex1  align-center color_header">
+                <div class="logo flex align-center  ">
                     <a href="index.html"><img src="./images/logo.svg" alt=""></a>
                     <div>
                         <h1>HiTech.NET</h1>
@@ -35,19 +36,47 @@
                     </div>
                     
                     <form action="" class="form flex">
+<<<<<<< HEAD
                         <input class="search" type="search" name="search" placeholder="Chercher un produit, une marque...">
 
                         <select class="search" name="select" id="">
+=======
+                        <input class="search " type="search" name="search" placeholder="Chercher un produit, une marque...">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                                
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                              </svg>
+                        </span>
+                        <select class="search" name="select">
+                            <option value="Tous les rayons">Tous les rayons...</option>
+>>>>>>> 2be2399598c1f5ac7a6d0aac6085ed7dae4fb97c
                             <option value="Ordinateur">Ordinateur</option>
-                            <option value="Périferiques & composants"><a href="#">Périferiques & composants</a></option>
-                            <option value="Objet connectés"> <a href="#">Objet connectés</a></option>
+                            <option value="Périphériques & composants"><a href="#">Péripheriques & composants</a></option>
+                            <option value="Objet connectés"> <a href="#">Objets connectés</a></option>
                             <option value="Téléphone"> <a href="#">Téléphone</a></option>
                         </select>
                     </form>
                 </div>
                 <div class="flex ">
-                    <p>Mon compte</p>
-                    <p>Mon panier</p>
+                    <p class="flex_column">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>
+                          
+                        Mon compte
+                    </p>
+                    <p class="flex_column">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                        </svg>
+                          
+                        Mon panier
+                    </p>
                 </div>
 
             </div>
@@ -55,39 +84,58 @@
             <nav class="theme ">
                 <ul class="flex align-center">
 
-                    <li>
+                    <li class="flex align-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                        </svg>
+                          
                         <a href="#">Ordinateur</a>
 
                         <div class="flex_nav none">
 
                             <ul>
                                 <strong>PC Portable</strong>
-                                <li><a>Macbook</a></li> 
-                                <li><a>Extension mémoire</a></li> 
-                                <li><a>Disque dur 2"1/2</a></li>   
-                                <li><a>Sacs & sacoches</a></li>  
-                                <li><a>Refroidisseur</a></li>  
-                                <li><a>Station d'accueil</a></li>   
-                                <li><a>Chargeur</a></li>  
-                                <li><a>Garantie</a></li>  
-                                <li><a>Batterie</a></li>  
+                                <li><a href="#" >Macbook</a></li> 
+                                <li><a href="#" >Extension mémoire</a></li> 
+                                <li><a href="#">Disque dur 2"1/2</a></li>   
+                                <li><a href="#">Sacs & sacoches</a></li>  
+                                <li><a href="#">Refroidisseur</a></li>  
+                                <li><a href="#">Station d'accueil</a></li>   
+                                <li><a href="#">Chargeur</a></li>  
+                                <li><a href="#">Garantie</a></li>  
+                                <li><a href="#">Batterie</a></li>  
                             </ul>
         
                             <ul>
                                 <li><strong> Fixes</strong></li>
+<<<<<<< HEAD
                                 <li><a href="">Ordinateur PC fixe</a> </li>
                                 <li><a href=""> Ordinateur Apple</a></li>
                                 <li><a href="">Barebone</a> </li>
+=======
+                                <li><a href="#">Ordinateur PC fixe</a> </li>
+                                <li><a href="#"> Ordinateur Apple</a></li>
+                                <li><a href="#">Barebone</a> </li>
+>>>>>>> 2be2399598c1f5ac7a6d0aac6085ed7dae4fb97c
                             </ul>
         
                             <ul>
                                 <strong>Tablettes</strong>
+<<<<<<< HEAD
                                 <li><a href="">Tablette</a> </li>
                                 <li><a href="">iPad</a> </li>
+=======
+                                <li><a href="#">Tablette</a> </li>
+                                <li><a href="#">iPad</a> </li>
+>>>>>>> 2be2399598c1f5ac7a6d0aac6085ed7dae4fb97c
                             </ul>
                         </div>
                     </li>        
-                    <li>
+                    <li class="flex align-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                        </svg>
+                          
                         <a href="#">Périphériques & composants</a>
 
                         <div class="flex_nav none ">
@@ -152,33 +200,41 @@
                     </li>
 
 
-                    <li >
+                    <li class="flex align-center" >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                        </svg>
+                          
                         <a href="#">Téléphone</a>
 
                         <div class="flex_nav none">
 
                             <ul>
                                  <strong>Mobile</strong>
-                                <li>Mobile & smartphone</li>
+                                <li><a href="#">Mobile & smartphone</a> </li>
                             </ul>
 
                             <ul>
-                                 <strong>Accessoires</strong> 
-                                <li> Carte mémoire</li>
-                                <li>Étuis</li>
-                                <li>Kit piéton/casque</li>
-                                <li> Batterie</li>
-                                <li>Accessoires iPhone</li>
-                                <li>Chargeur</li>
-                                <li>Câble & adaptateur</li>
-                                <li>Pile & chargeur</li>
-                                <li>Batterie téléphone</li>
+                                <strong>Accessoires</strong> 
+                                <li><a href="#">Étuis</a> </li>
+                                <li><a href="#">Carte mémoire</a> </li>
+                                <li><a href="#">Kit piéton/casque</a> </li>
+                                <li><a href="#">Batterie</a> </li>
+                                <li><a href="#">Accessoires iPhone</a> </li>
+                                <li><a href="#">Chargeur</a> </li>
+                                <li><a href="#">Câble & adaptateur</a> </li>
+                                <li><a href="#"> Pile & chargeur</a></li>
+                                <li><a href="#">Batterie téléphone</a> </li>
                             </ul>
 
                         </div>
                     
                     </li>
-                    <li >
+                    <li class="flex align-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                          
                         <a href="#">Objet connectés</a>
 
                         <div class="flex_nav none ">
@@ -186,28 +242,28 @@
                             <ul>
                                  <strong>Maison</strong>
                                
-                                <li>Caméra de surveillance</li>
-                                <li>Détecteur & capteur</li>
-                                <li>Kit alarme</li>
-                                <li>Centrale multifonction</li>
-                                <li>Enregistrement vidéo</li>
-                                <li>Stations météo</li>
-                                <li>Ampoule connectée</li>
-                                <li>Enceinte connectée</li>
+                                <li><a href="#">Caméra de surveillan</a> ce</li>
+                                <li><a href="#">Détecteur & capteur</a> </li>
+                                <li><a href="#">Kit alarme</a> </li>
+                                <li><a href="#">Centrale multifonction</a> </li>
+                                <li><a href="#">Enregistrement vidéo</a> </li>
+                                <li><a href="#">Stations météo</a> </li>
+                                <li><a href="#">Ampoule connectée</a> </li>
+                                <li><a href="#">Enceinte connectée</a> </li>
                             </ul>
 
                             <ul>
                                  <strong>Loisirs</strong>  
-                                <li>Drone</li>
-                                <li> Gyropode</li>
-                                <li>Accessoire drone</li>
-                                <li>Montre connectée</li>
+                                <li><a href="#">Drone</a> </li>
+                                <li><a href="#">Gyropode</a> </li>
+                                <li><a href="#">Accessoire drone</a> </li>
+                                <li><a href="#">Montre connectée</a> </li>
                             </ul>
         
                             <ul>
                                 <strong>Sport</strong> 
-                                <li> Montre running</li>
-                                <li> Bracelet connecté</li>
+                                <li><a href="#">Montre running</a> </li>
+                                <li><a href="#">Bracelet connecté</a> </li>
                             </ul>
                         </div>
                     </li>
@@ -215,5 +271,318 @@
             </nav>
         </div>
    </header> 
+    <main class="header_container container">
+    <div class="container">
+      <!-- le fil d'ariane -->
+            <ul class="fil_ariane flex flex_start">
+                <li><a href="#">Acceuil</a></li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>    
+                <li><a href="#">Périphériques & composants</a></li> 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>   
+                <li><a href="">Ecrans d'ordinateur</a></li> 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>   
+                <li><p>AOC 24B1XHS</p></li>    
+            </ul>
+            
+
+            <!-- la page et ses section -->
+            <p> <strong>AOC 24B1XHS</strong></p>
+            <ul class="flex flex_start">
+                <li><a href="#">Présentation</a></li>
+                <li><a href="#">Descriptif</a></li>
+                <li><a href="#">Caractéristiques techniques</a></li>
+            </ul>
+    </div>
+    <section>
+        <h2>Présentation</h2>
+        <ul class="etiquette">
+            <li><p>1920 * 1000 pixels</p> </li>
+            <li><p>7 ms</p></li>
+            <li><p>Dalle IPS </p> </li>
+            <li><p>HDMI</p> </li>
+            <li><p> VGA</p></li>
+            <li><p>Noir</p> </li>
+        </ul>
+        <div class="container_presentation grid">
+            <div class="television_container">
+                <div>
+                    <img src="./images/product-1/slide-1-lg.jpg" alt="">
+                </div>
+                <div class="mini_image">
+                    <p class="center">Photo non contractuelles</p>
+                    <div class="flex">
+                        <img src="./images/product-1/slide-1-md.jpg" alt="television">
+                        <img src="./images/product-1/slide-2-md.jpg" alt="televion">
+                        <img src="./images/product-1/slide-3-md.jpg" alt="televion">
+                        <img src="./images/product-1/slide-4-lg.jpg" alt="televion">
+                        <img src="./images/product-1/slide-5-lg.jpg" alt="televion">
+                    </div>
+                
+
+                </div>
+            </div>
+            <div class="buy_container">
+                <div class="buy_logo flex align-center">
+                    <img src="./images/brand-1/logo-md.png" alt="">
+                    <p>Marque: AOC</p>
+                </div> 
+                <div class="buy_shoppingbag">
+                    <div class=" container_price">
+                        <div class="flex align-center cprice">  <!-- pour fair le display flex sur les deux premieres div -->
+                            <div class="price">
+                                <p>109€94</p>
+                                <span>dont éco-participation 1€70</span>
+                            </div>
+                            <div class="shoppingbag_button flex_column">
+                                <button>Ajouter au panier</button>
+                                <button>Ajouter à ma liste d'envie</button>
+                            </div>
+                        </div>
+                        <p class="
+                        center">Garantie: 2 années vendeur</p>
+                    </div>
+                    <div class="figurecaption">
+                
+                        <p>Un écran 23,8" Full HD et sans bords; c'est sûrement votre futur moniteur pour la maison ou le bureau. AOC vous propose le 24B1XHS, un produit élégant au look doté d'une dalle VA avec un temps de réponse rapide de 7 ms en résolution 1920 x 1080 pixels. Cet écran WLED très fonctionnel offre un contenu avec un fréquence de 60 Hz, idéal pour tous les usages du quotidien.
+                        </p>
+                        <ul>
+                            <li>Écran large de 23.8" avec résolution Full HD (1920 x 1080)</li>
+                            <li>Des couleurs riches et nuancées avec un contraste dynamique </li>
+                            <li>de 20.000.000:1 (typique 1000:1)</li>
+                            <li>Temps de réponse de 7 ms</li>
+                            <li>Dalle IPS</li>
+                            <li>Luminosité 250 cd/m²</li>
+                            <li>Modes Flicker-Free et Anti-lumière bleue (Low blue mode)</li>
+                            <li>Connecteurs : HDMI 1.4, VGA </li>
+                            <li>Connecteurs : HDMI 1.4, VGA </li>
+                            <li>Consommation d'énergie modeste : 25 Watts </li>
+                            <li>Dimensions (avec support) : 419.8 x 540.1 x 186.8 mm</li>
+                            <li>Poids : 2.48 kg</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+    </section>
+    <section>
+        <h2>Descriptif</h2>
+        <article >
+            <h3 class="f_type">Un moniteur Full HD performant et tout en finesse</h3>
+               <div class="description float_right gap"><img src="./images/product-1/screen.png" alt="screen" ></div>
+            <p>
+                Issu de la série B1, le moniteur AOC 24B1XHS dispose de tous les atouts indispensables pour offrir une expérience utilisateur agréable. Son écran Full HD de 23.8" s'accompagne d'une dalle IPS ainsi que d'un temps de réponse de 7 ms pour une image toujours performante. Aussi, le 24B1XHS séduit par son profil plat et son design sans contour qui favorise le plaisir visuel et l'immersion. Ce moniteur WLED trouvera facilement une place de choix sur votre bureau pour toutes vos utilisations quotidiennes.
+            </p>
+        </article>
+        <article >
+            <h3>Appréciez le design sans contour</h3>
+            <div class="description float_left gap"><img src="./images/product-1/desc-1.jpg" alt="screen"></div>
+            <p> 
+
+                En plus du look moderne et attrayant qu'il procure, le design sans contour permet des configurations à plusieurs écrans sans interruption. Votre curseur, vos fenêtres ne sont plus perdus dans les abysses sombres des contours lorsque plusieurs écrans sont placés les uns à côté des autres.
+                
+                Le profil plat de ce moniteur AOC offre de nombreux avantages. Très élégant sous tous les angles, il devient un choix idéal dans les espaces publics. Sa finesse et sa conception moderne lui permettent d'occuper moins de place sur le bureau.
+            </p>
+        </article>
+
+        <article >
+            <h3>Tout le confort nécessaire</h3>
+            <div class="description float_right">
+                <img src="./images/product-1/desc-2.jpg " alt="">
+            </div>
+            <p>
+                
+                Agréable visuellement et intuitif, ce moniteur dispose également d'une dalle IPS. Cette dernière reproduit des couleurs éclatantes et offre de très larges angles de vue. De cette façon, les images gardent toujours un excellent aspect et une parfaite précision, quel que soit l'angle auquel vous regardez l'écran. 
+            </p>
+
+            <p>
+                Vous voulez utiliser votre écran même dans un environnement très lumineux, à côté d'une fenêtre au soleil par exemple ? La haute luminosité de 250 cd/m² garantit une bonne visibilité, même dans des conditions difficiles.
+            </p>
+        </article>
+    </section>
+    <section>
+       
+            <h3>Caractéristiques techniques</h3>
+             <div class="flex table">
+                 <p>Affichage</p> 
+            <table>
+                <tr><td> Taille de l'écran::23.8 pouces</td></tr>
+                <tr><td> Format de l'écran</td><td>16/9</td></tr>
+                <tr><td> Type de Dalle</td><td>Dalle IPS</td></tr>
+                <tr><td> Technologie LCD</td><td>IPS</td></tr>
+                <tr><td> Résolution Max</td><td>1920 x 1080 pixels</td></tr>
+                <tr><td> Dot Pitch</td><td>0.2745 mm</td></tr>
+                <tr><td> Luminosité</td><td>250 cd/m²</td></tr>
+                <tr><td> Contraste</td><td>20000000 /1</td></tr>
+                <tr><td> Temps de réponse</td><td>7 ms</td></tr>
+                <tr><td> Angle de vision (horizontal)</td><td>178 Degré(s)</td></tr>
+                <tr><td> Angle de vision (vertical)</td><td>178 Degré(s)</td></tr>
+                <tr><td> Dalle mate/antireflets</td><td>Oui</td></tr>
+                <tr><td> NVIDIA G-SYNC</td><td>Non</td></tr>
+                <tr><td> Adaptive-Sync</td><td>Non</td></tr>
+                <tr><td> AMD FreeSync</td><td>Non</td></tr>
+                <tr><td> Flicker-Free</td><td>Oui</td></tr>
+                <tr><td> Anti-lumière bleue</td><td>Oui</td></tr>
+            </table>
+        </div>
+
+        <div class="flex  table">
+            <p>Ecran</p> 
+            <table>
+                <tr><td> Type d'écran</td><td>LED</td></tr>
+                <tr><td> Ecran large</td><td>Oui</td></tr>
+                <tr><td> Ecran incurvé</td><td>Non</td></tr>
+                <tr><td> Borderless</td><td>Oui</td></tr>
+                <tr><td> Compatible 3D</td><td>Non</td></tr>
+                <tr><td> Ecran tactile</td><td>Non</td></tr>
+                <tr><td> Fréquence verticale mini</td><td>60 Hz</td></tr>
+                <tr><td> Type d'activités</td><td>Bureautique</td></tr>
+            </table>
+        </div>
+
+        <div class="flex  table">
+            <p>Ergonomie</p> 
+            <table>
+                <tr><td> Pivot</td><td>Non</td></tr>
+                <tr><td> Pied réglable en hauteur</td><td>Non</td></tr>
+                <tr><td> Pied amovible</td><td>Oui</td></tr>
+                <tr><td> Fixation VESA</td><td>N/A</td></tr>
+                <tr><td> Angle inclinaison vers l'arrière (haut)</td><td>21.5 Degré(s)</td></tr>
+                <tr><td> Angle inclinaison vers l'avant (bas)</td><td>3.5 Deg</td></tr>
+            </table>
+        </div>
+
+        <div class="flex table">
+            <p>Connectique</p>
+            <table>
+                <tr><td> Entrées vidéo</td><td>1 X HDMI Femelle</td></tr>
+                <tr><td> 1 X VGA (D-sub 15 Femelle)</td></tr>
+                <tr><td> Entrée audio</td><td>Aucun(e)</td></tr>
+                <tr><td> Sorties audio</td><td>1 X Line OUT (Jack 3.5mm Femelle)</td></tr>
+            </table>
+        </div>
+        <div class="flex table">
+            <p>MultXimédia</p> 
+            <table>
+                <tr><td> H.P. Intégrés</td><td>Non</td></tr>
+                <tr><td> Webcam</td><td>Non</td></tr>
+                <tr><td> Tuner TV</td><td>Non</td></tr>
+            </table>
+        </div>
+
+        <div class="flex table">
+            <p>Caractéristiques physiques</p>
+            <table>
+                <tr><td> Couleur</td><td>Noir</td></tr>
+                <tr><td> Largeur</td><td>540.1 mm</td></tr>
+                <tr><td> Hauteur</td><td>417.4 mm</td></tr>
+                <tr><td> Profondeur</td><td>186.8 mm</td></tr>
+                <tr><td> Poids</td><td>2.48 kg</td></tr>
+                <tr><td> Pack multi-écrans</td><td>Non</td></tr>
+            </table>
+     
+        </div>
+
+        <div class="flex table">
+            <p>Alimentation</p> 
+            <table>
+                <tr><td> Consommation</td><td>25 W</td></tr>
+                <tr><td> Consommation en veille</td><td>0.5 W</td></tr>
+                <tr><td> Alimentation interne</td><td>Non
+            </table>
+        </div>
+       
+    </section>
+  </main>
+   <footer>
+        <nav class="theme header_container">
+            <ul class="flex align-center">
+                <li class="flex align-center">    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                    </svg>
+                    <a href="#">Ordinateur</a>
+                </li>
+                <li class="flex align-center"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                    </svg>
+                    <a href="#">Périphérique & composants </a>
+                </li>
+                <li class="flex align-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                    </svg>
+                    <a href="#">Telephone</a>
+                </li>
+                <li class="flex align-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <a href="#">Objets connectés</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header_container grid">
+            <div class="first_section_footer">
+                <section class="flex_column ">
+                    <h2 class="center">Moyens de paiement</h2>
+                    <div class="flex gap sprite_container">
+                        <div class="sprite sp1"></div>
+                        <div class="sprite sp2"></div>
+                        <div class="sprite sp3"></div>
+                        <div class="sprite sp4"></div>
+                    </div>
+                </section>
+                <section class="flex_column">
+                    <h2>Sur les réseaux sociaux</h2>
+                    <div class="icon flex">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </section>
+            </div>
+            <div class="scd_section_footer">
+                <section class="flex_column">
+                    <h2 >A propos</h2>
+                    <ul class="center">
+                        <li><a href="#">Qui sommes-nous </a></li>
+                        <li><a href="#">Nos services</a></li>
+                        <li><a href="">Contactez-nous</a></li>
+                    </ul>
+                </section>
+                <section class="flex_column">
+                    <h2 >A propos</h2>
+                    <ul class="center">
+                        <li><a href="#">Plan du site </a></li>
+                        <li><a href="#">Foire au question </a></li>
+                        <li><a href="#">Conditions générales de vente </a></li>
+                        <li><a href="#">Informations légales</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="center header_container">
+            <img src="./images/logo-3wa.png" alt="logo de la 3W Academy ">
+            <p>
+                Cet exercice de <a href="#">3W Academy</a>  est mis à disposition <a href="#"> pour l'usage personnel des étudiants. Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International.</a>
+                Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="contact@3wa.fr">contact@3wa.fr</a> . Les maquettes ont été réalisées par Catherine Denos. 
+            </p>
+        </div>
+</footer>
 </body>
 </html>
