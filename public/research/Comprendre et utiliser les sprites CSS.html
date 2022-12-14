@@ -1,0 +1,852 @@
+﻿<!DOCTYPE html>
+<html lang='fr'>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120437426-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120437426-1');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2962760760358400",
+    enable_page_level_ads: true
+  });
+</script>
+<script>
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript";
+    mf.defer = true;
+    mf.src = "//cdn.mouseflow.com/projects/4b497602-3f82-44bc-9c44-7bc239ab9ae8.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>	<title>Comprendre et utiliser les sprites CSS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name='description' content="Qu'est ce qu'un sprite CSS, à quoi sert un sprite CSS." />
+	<meta name="robots" content="index,follow" />
+	<link href="/V2/COMMUN/styles/menu.css" rel="stylesheet" />
+	<link href="/V2/COMMUN/styles/commun.css" rel="stylesheet" />
+	<link href="/V2/COMMUN/styles/section-tuto.css" rel="stylesheet" />
+	<link href="/V2/COMMUN/codemirror/lib/codemirror.css" rel="stylesheet" />
+	<link href="/V2/COMMUN/codemirror/theme/blackboard.css" rel="stylesheet" />
+
+	<style>
+
+		img.illustration {
+			padding:1em;
+		}
+
+		figure figcaption {
+			padding-bottom: 2em;
+		}
+
+	</style>
+</head>
+<body>
+
+	<nav id='DR' title='Replier toute la page'>Replier</nav>
+	<input type="checkbox" id="main-nav-check">
+
+
+<nav id="menu">
+	<label for="main-nav-check" class="toggle" onclick="" title="Close">&times;</label>
+	<ul>
+
+		<!-- ++++  -->
+		<li>
+			<a href="#">INTRODUCTION</a>
+
+			<!--  Début Sous Menu 1 -->
+			<label for="menu-1-id" class="toggle-sub" onclick="">&#9658;</label>
+			<input type="checkbox" id="menu-1-id" class="sub-nav-check">
+			<ul id="menu-1-sub" class="sub-nav">
+				<li class="sub-heading">INTRODUCTION <label for="menu-1-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+				<li><a title="Qui fait quoi lors d’une requête HTTP ?" href="/V2/TUTO/CHAPITRE/INTRODUCTION/01-requete-http/">Une requete HTTP</a></li>
+				<li><a title="A quoi servent le HTML et le CSS ?" href="/V2/TUTO/CHAPITRE/INTRODUCTION/02-html-css/">HTML et CSS</a></li>
+				<li><a title="A quoi sert le JAVASCRIPT ?" href="/V2/TUTO/CHAPITRE/INTRODUCTION/03-javascript/">JavaScript</a></li>
+				<li><a title="A quoi servent le PHP et MYSQL ?" href="/V2/TUTO/CHAPITRE/INTRODUCTION/04-php-mysql/">PHP-MYSQL</a></li>
+				<li><a title="Rôle et intérêt d'une requête AJAX" href="/V2/TUTO/CHAPITRE/INTRODUCTION/05-ajax/">AJAX</a></li>
+				<li><a title="A quoi sert JQUERY ?" href="/V2/TUTO/CHAPITRE/INTRODUCTION/06-jquery/">JQUERY</a></li>
+				<li class='to-quizz'><a title="Quiz sur tout le chapitre d'introduction" href="/V2/TUTO/CHAPITRE/INTRODUCTION/00-presentation/index.php?quizz_id=9">Quiz</a></li>
+			</ul>
+			<!--  Fin Sous Menu 1 -->
+
+		</li>
+		<!-- ++++  -->
+		<li>
+			<a href="#">HTML et CSS</a>
+
+			<!--  Début Sous Menu 2 -->
+			<label for="menu-2-id" class="toggle-sub" onclick="">&#9658;</label>
+			<input type="checkbox" id="menu-2-id" class="sub-nav-check">
+			<ul id="menu-2-sub" class="sub-nav">
+				<li class="sub-heading">HTML et CSS <label for="menu-2-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+				<li>
+					<a href="#">Debuter</a>
+
+					<!--  Début Sous Menu 2-1 -->
+					<label for="menu-2-1-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-1-id" class="sub-nav-check">
+					<ul id="menu-2-1-sub" class="sub-nav">
+						<li class="sub-heading">Debuter
+							<label for="menu-2-1-id" class="toggle" onclick="" title="Back">&#9658;</label>
+						</li>
+						<li><a title="Débuter en HTML. Coder votre première page en HTML." href="/V2/TUTO/CHAPITRE/HTML-CSS/01-debuter-en-html/">Débuter en HTML</a></li>
+						<li><a title="Débuter en CSS. Coder votre première page en CSS." href="/V2/TUTO/CHAPITRE/HTML-CSS/02-debuter-en-css/">Débuter en CSS</a></li>
+						<li class='to-quizz'><a title="Quiz sur les tutoriels Débuter en HTML et Débuter en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=10">Quiz</a></li>
+					</ul>
+					<!--  Fin Sous Menu 2-1 -->
+				</li>
+
+				<li>
+					<a href="#">Généralités</a>
+
+					<!--  Début Sous Menu 2-2 -->
+					<label for="menu-2-2-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-2-id" class="sub-nav-check">
+					<ul id="menu-2-2-sub" class="sub-nav">
+						<li class="sub-heading">Généralités <label for="menu-2-2-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+						<li><a title="Qui visite votre page web et les contraintes que cela engendre ?" href="/V2/TUTO/CHAPITRE/HTML-CSS/03-qui-visite-votre-page-web/">Qui visite votre page ?</a></li>
+						<li><a title="Comment faire une page web responsive ?" href="/V2/TUTO/CHAPITRE/HTML-CSS/04-une-page-web-responsive/">Page Web responsive</a></li>
+						<li><a title="Structure minimale d'une page codée en HTML" href="/V2/TUTO/CHAPITRE/HTML-CSS/05-structure-minimale-html/">Structure minimale</a></li>
+						<li><a title="Eléments de structure du document en HTML5" href="/V2/TUTO/CHAPITRE/HTML-CSS/06-element-structure-HTML5/">Structure HTML5</a></li>
+
+						<li class='to-quizz'><a title="Quiz sur la structure minimale d'un document HTML et sur les éléments de structure HTML5" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=11">Quiz</a></li>
+					</ul>
+					<!--  Fin Sous Menu 2-2 -->
+				</li>
+
+
+				<li>
+					<a href="#">Eléments de base</a>
+
+					<!--  Début Sous Menu 2-3 -->
+					<label for="menu-2-3-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-3-id" class="sub-nav-check">
+					<ul id="menu-2-3-sub" class="sub-nav">
+						<li class="sub-heading">Eléments de base <label for="menu-2-3-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+						<li><a title="Comment gérer la couleur en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/07-color/">La couleur</a></li>
+						<li><a title="Utliser les Polices de caractères en HTML et CSS." href="/V2/TUTO/CHAPITRE/HTML-CSS/08-utiliser-les-polices/">Les polices</a></li>
+						<li><a title="Styler du Texte en CSS ou mettre en valeur du Texte." href="/V2/TUTO/CHAPITRE/HTML-CSS/09-les-textes/">Les textes</a></li>
+						<li><a title="Les titres en HTML de h1 à h6" href="/V2/TUTO/CHAPITRE/HTML-CSS/10-les-titres/">Les titres</a></li>
+						<li><a title="Le modèle de boîte en HTML et en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/11-le-modele-de-boite/">Modèle de boîte</a></li>
+						<li><a title="Les éléments de type inline, block et inline-block" href="/V2/TUTO/CHAPITRE/HTML-CSS/12-inline-block/">Inline ou Block</a></li>
+						<li><a title="A quoi servent les éléments HTML Div et Span ?" href="/V2/TUTO/CHAPITRE/HTML-CSS/13-div-et-span/">Div et Span</a></li>
+						<li><a title="Comment écrire une URL en HTML et en CSS." href="/V2/TUTO/CHAPITRE/HTML-CSS/14-le-chemin-des-ressources/">Les Urls</a></li>
+						<li><a title="Les liens en HTML et en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/15-les-liens/">Les liens</a></li>
+						<li><a title="Les formats des fichiers images pour le Web" href="/V2/TUTO/CHAPITRE/HTML-CSS/16-les-format-des-fichiers-images/">Les formats d'images</a></li>
+						<li><a title="Comment utiliser les images sur une page Web en HTML" href="/V2/TUTO/CHAPITRE/HTML-CSS/17-les-images/">Les images</a></li>
+
+						<li><a title="Les listes à puces en HTML et en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/18-les-listes/">Les listes</a></li>
+						<li><a title="Les tableaux en HTML et en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/19-les-tableaux/">Les tableaux</a></li>
+
+						<li class='to-quizz'><a title="Quiz listes et tableaux en HTML et en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=18">Quiz</a></li>
+					</ul>
+					<!--  Fin Sous Menu 2-2 -->
+				</li>
+
+
+				<li>
+					<a href="#">Les Sélecteurs</a>
+
+					<!--  Début Sous Menu 2-4 -->
+					<label for="menu-2-4-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-4-id" class="sub-nav-check">
+					<ul id="menu-2-4-sub" class="sub-nav">
+						<li class="sub-heading">Les Sélecteurs <label for="menu-2-4-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+						<li><a title="Apprendre à utiliser les sélecteurs CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/20-les-selecteurs-css/">Les Sélecteurs CSS</a></li>
+						<li class='to-quizz'><a title="Quiz sur l'utilisation des sélecteurs en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=1">Quiz</a></li>
+					</ul>
+					<!--  Fin Sous Menu 2-4 -->
+				</li>
+
+				<li>
+					<a href="#">Le Positionnement</a>
+
+					<!--  Début Sous Menu 2-5 -->
+					<label for="menu-2-5-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-5-id" class="sub-nav-check">
+					<ul id="menu-2-5-sub" class="sub-nav">
+						<li class="sub-heading">Le Positionnement <label for="menu-2-5-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+						<li><a title="Qu'est ce que le positionnement dans le flux ?" href="/V2/TUTO/CHAPITRE/HTML-CSS/21-le-positionnement-dans-le-flux/">Dans le flux</a></li>
+						<li><a title="Comment utiliser la propriété position en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/22-la-propriete-position/">Propriété position</a></li>
+						<li><a title="Comment positionner des éléments en flottant en HTML" href="/V2/TUTO/CHAPITRE/HTML-CSS/23-le-positionnement-flottant/">Flottant</a></li>
+						<li><a title="Apprendre à utiliser la propriété z-index" href="/V2/TUTO/CHAPITRE/HTML-CSS/24-la-propriete-z-index/">Z-index</a></li>
+						<li class='to-quizz'><a title="Quiz sur les quatre tutoriels qui traitent du positionnement" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=13">Quiz</a></li>
+
+
+						<li><a title="Apprendre à centrer les éléments HTML en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/25-le-centrage-css/">Le Centrage</a></li>
+						<li class='to-quizz'><a title="Quiz sur le centrage en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=14">Quiz</a></li>
+
+						<li><a title="Comprendre la fusion des marges" href="/V2/TUTO/CHAPITRE/HTML-CSS/29-fusion-de-marge/">La fusion de marges</a></li>
+
+						<li class='to-quizz'><a title="Quiz sur la fusion des marges en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=17">Quiz</a></li>
+
+
+						<li><a title="Apprendre à utiliser les Flexbox." href="/V2/TUTO/CHAPITRE/HTML-CSS/26-les-flexbox/">Les Flexbox</a></li>
+
+						<li class='to-quizz'><a title="Quiz sur les Flexbox" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=12">Quiz</a></li>
+
+					</ul>
+					<!--  Fin Sous Menu 2-5 -->
+				</li>
+
+
+				<li>
+					<a href="#">Les Règles CSS</a>
+
+					<!--  Début Sous Menu 2-6 -->
+					<label for="menu-2-6-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-6-id" class="sub-nav-check">
+					<ul id="menu-2-6-sub" class="sub-nav">
+						<li class="sub-heading">Les Règles CSS <label for="menu-2-6-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+						<li><a title="Comprendre l'héritage en HTML et en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/27-heritage/">Héritage</a></li>
+
+						<li class='to-quizz'><a title="Quiz sur l'héritage en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=15">Quiz</a></li>
+
+						<li><a title="Comprendre les mécanismes de la cascade en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/28-la-cascade-css/">La Cascade</a></li>
+
+						<li class='to-quizz'><a title="Quiz sur la cascade CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/00-presentation/index.php?quizz_id=16">Quiz</a></li>
+
+					</ul>
+					<!--  Fin Sous Menu 2-5 -->
+				</li>
+
+
+				<li>
+					<a href="#">Formulaires</a>
+
+					<!--  Début Sous Menu 2-7 -->
+					<label for="menu-2-7-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-7-id" class="sub-nav-check">
+					<ul id="menu-2-7-sub" class="sub-nav">
+						<li class="sub-heading">Formulaires <label for="menu-2-7-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+						<li><a title="Les bases des formulaires en HTML" href="/V2/TUTO/CHAPITRE/HTML-CSS/30-base-des-formulaires-html/">Les Bases</a></li>
+						<li><a title="Les champs de formulaires issus de la norme HTML 4" href="/V2/TUTO/CHAPITRE/HTML-CSS/31-champs-formulaires-html4/">Champs HTML4</a></li>
+						<li><a title="Les champs de formulaires issus de la norme HTML 5" href="/V2/TUTO/CHAPITRE/HTML-CSS/32-champs-formulaires-html5/">Champs HTML5</a></li>
+
+					</ul>
+					<!--  Fin Sous Menu 2-7 -->
+				</li>
+
+
+				<li>
+					<a href="#">Compléments</a>
+
+					<!--  Début Sous Menu 2-8 -->
+					<label for="menu-2-8-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-8-id" class="sub-nav-check">
+					<ul id="menu-2-8-sub" class="sub-nav">
+						<li class="sub-heading">Compléments <label for="menu-2-8-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+						<li><a title="A quoi servent les préfixes vendeurs ?" href="/V2/TUTO/CHAPITRE/HTML-CSS/33-les-prefixes-vendeurs/">Les Préfixes</a></li>
+						<li><a title="La syntaxe de définition des valeurs d'une propriété CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/34-la-syntaxe-des-valeurs-css/">Syntaxe CSS</a></li>
+						<li><a title="La gestion du background en CSS3" href="/V2/TUTO/CHAPITRE/HTML-CSS/35-le-background-en-css/">Le Background</a></li>
+						<li><a title="Comprendre et utiliser les sprites CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/36-les-sprites-css/">Les Sprites</a></li>
+						<li><a title="Les dégradés linéaires et radial en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/37-les-degrades-en-css/">Les Dégradés</a></li>
+						<li><a title="Les ombres portées en CSS sur les bordures et sur les textes." href="/V2/TUTO/CHAPITRE/HTML-CSS/38-les-ombres-en-css/">Les Ombres</a></li>
+						<li><a title="La propriété CSS border-image" href="/V2/TUTO/CHAPITRE/HTML-CSS/39-border-image/">Border-Image</a></li>
+
+					</ul>
+					<!--  Fin Sous Menu 2-8 -->
+				</li>
+
+
+				<li>
+					<a href="#">Animations</a>
+
+					<!--  Début Sous Menu 2-9 -->
+					<label for="menu-2-9-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-2-9-id" class="sub-nav-check">
+					<ul id="menu-2-9-sub" class="sub-nav">
+						<li class="sub-heading">Animations <label for="menu-2-9-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+						<li><a title="Qu'est ce qu'une transition CSS et comment la coder" href="/V2/TUTO/CHAPITRE/HTML-CSS/40-transition-css/">Les Transitions</a></li>
+						<li><a title="Apprendre à utiliser la propriété CSS transform" href="/V2/TUTO/CHAPITRE/HTML-CSS/41-transformation-css/">Les Transformations</a></li>
+						<li><a title="Comment coder une animation en CSS" href="/V2/TUTO/CHAPITRE/HTML-CSS/42-animation-css/">Les Animations</a></li>
+
+					</ul>
+					<!--  Fin Sous Menu 2-9 -->
+				</li>
+
+
+			</ul>
+
+		</li>
+
+
+		<li><a href="#">JAVASCRIPT</a>
+
+			<!--  Début Sous Menu 3 -->
+			<label for="menu-3-id" class="toggle-sub" onclick="">&#9658;</label>
+			<input type="checkbox" id="menu-3-id" class="sub-nav-check">
+			<ul id="menu-3-sub" class="sub-nav">
+				<li class="sub-heading">JAVASCRIPT <label for="menu-3-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+				<li>
+					<a href="#" title='Vous voulez apprendre JavaScript et vous ne savez pas programmer du tout'>Débuter</a>
+
+					<!--  Début Sous Menu 3-1 -->
+					<label for="menu-3-1-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-3-1-id" class="sub-nav-check">
+					<ul id="menu-3-1-sub" class="sub-nav">
+						<li class="sub-heading">Débuter <label for="menu-3-1-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+						<li><a title="A qui s'adressent ces tutoriels ? Mise en place d'un espace de travail." href="/V2/TUTO/CHAPITRE/JAVASCRIPT/02-debuter-javascript-workspace/">Environnement de Travail</a></li>
+						<li><a title="Découvrez à quoi sert une variable en Programmation." href="/V2/TUTO/CHAPITRE/JAVASCRIPT/03-debuter-javascript-variable/">Variable</a></li>
+						<li><a title="Découvrez à quoi sert un test conditionnel en Programmation" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/04-debuter-javascript-test-conditionnel/">Test Conditionnel</a></li>
+						<li><a title="Découvez à quoi sert une fonction en Programmation" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/05-debuter-javascript-fonction/">Fonction</a></li>
+						<li><a title="Découvez à quoi sert un tableau en Programmation" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/06-debuter-javascript-tableau/">Tableau</a></li>
+						<li><a title="Découvez à quoi sert une boucle en Programmation" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/07-debuter-javascript-boucle/">Boucle</a></li>
+						<li class='to-quizz'><a title="Quiz sur la playlist débuter par JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=3">Quiz</a></li>
+						<li><a title='Liste des TDs de la playlist "Débuter par la Programmation par JavaScript"' href="/V2/TUTO/CHAPITRE/JAVASCRIPT/38-TD-debuter-programmation/">Liste des TDs</a></li>
+
+					</ul>
+					<!--  Fin Sous Menu 3-1 -->
+
+				</li>
+
+				<li>
+
+					<a href="#" title='Vous voulez apprendre JavaScript et vous savez déjà programmer'>Les bases</a>
+
+					<!--  Début Sous Menu 3-2 -->
+					<label for="menu-3-2-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-3-2-id" class="sub-nav-check">
+					<ul id="menu-3-2-sub" class="sub-nav">
+						<li class="sub-heading">Les bases <label for="menu-3-2-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+						<li><a title="Où peut-on mettre le code JavaScript ? Où faut-il le mettre en fonction de ce que l'on fait ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/08-implanter-le-code/">Implanter le code</a></li>
+						<li><a title="Découvrez les variables en JavaScript." href="/V2/TUTO/CHAPITRE/JAVASCRIPT/09-les-variables/">Les variables</a></li>
+						<li><a title="Découvrez les opérateurs en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/10-les-operateurs/">Les opérateurs</a></li>
+						<li><a title="Découvrez les conversions de type en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/11-conversion-de-type/">Conversions de type</a></li>
+						<li><a title="Découvrez les structures conditionnelles en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/12-if-else/">Structures conditionnelles</a></li>
+
+						<li><a title="Comprenez l'opérateur ternaire en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/13-ternaire/">Opérateur ternaire</a></li>
+						<li><a title="Apprenez à utiliser le switch en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/14-switch/">Le switch</a></li>
+						<li><a title="Apprenez à utiliser la boucle for en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/15-boucle-for/">La boucle for</a></li>
+						<li><a title="Apprenez à utiliser la boucle while en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/16-boucle-while/">Les boucles while</a></li>
+
+
+						<li><a title="Découvrez les fonctions en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/17-les-fonctions/">Les fonctions</a></li>
+						<li><a title="Découvrez les objets en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/18-les-objets/">Les objets</a></li>
+						<li><a title="Découvrez les tableaux en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/19-les-tableaux-js/">Les tableaux</a></li>
+						<li><a title="Apprenez à manipuler les chaînes de caractères en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/20-manipuler-les-chaines/">Les chaînes</a></li>
+						<li class='to-quizz'><a title="Quiz sur les bases de JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=20">Quiz</a></li>
+
+
+					</ul>
+					<!--  Fin Sous Menu 3-2 -->
+				</li>
+
+				<li>
+
+					<a href="#" title="Comprenez l'interface DOM et apprenez à vous s'en servir">Le DOM</a>
+
+					<!--  Début Sous Menu 3-3 -->
+					<label for="menu-3-3-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-3-3-id" class="sub-nav-check">
+					<ul id="menu-3-3-sub" class="sub-nav">
+						<li class="sub-heading">Le DOM <label for="menu-3-3-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+						<li><a title="Pourquoi trouve-t-on des interfaces dans le JavaScript du navigateur ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/21-les-interfaces-avec-javascript/">Les interfaces</a></li>
+						<li><a title="Qu'est ce que le DOM ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/22-presentation-interface-dom/">Présentation du DOM</a></li>
+						<li><a title="Parcourir le document HTML avec l'interface DOM" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/23-parcourir-le-document/">Parcourir le document</a></li>
+						<li><a title="Accéder au document HTML avec l'interface DOM" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/24-acceder-au-document/">Accéder au document</a></li>
+						<li><a title="Modifier le document HTML avec l'interface DOM" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/25-modifier-le-document/">Modifier le document</a></li>
+						<li><a title="Insérer du contenu dans le document HTML avec l'interface DOM" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/26-inserer-dans-le-document/">Insérer dans le document</a></li>
+						<li><a title="Apprenez à travailler avec innerHTML" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/27-travailler-avec-innerHTML/">Travailler avec innerHTML</a></li>
+						<li><a title="Modifier l'attribut style d'un élément HTML en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/28-modifier-attribut-style/">Modifier l'attribut Style</a></li>
+						<li><a title="Modifier la feuille de style CSS avec JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/29-modifier-les-styles-css/">Modifier la feuille de style</a></li>
+						<li><a title="Modifier les classes en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/30-modifier-les-classes/">Modifier les classes</a></li>
+						<li><a title="La gestion des événements en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/31-gestion-des-evenements/">Gestion des événements</a></li>
+						<li class='to-quizz'><a title="Quiz sur le DOM" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=21">Quiz</a></li>
+
+					</ul>
+					<!--  Fin Sous Menu 3-3 -->
+				</li>
+
+				<li>
+					<a href="#" title="Apprenez à manipuler les champs de formulaires en JavaScript">Les Formulaires</a>
+
+					<!--  Début Sous Menu 3-4 -->
+					<label for="menu-3-4-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-3-4-id" class="sub-nav-check">
+					<ul id="menu-3-4-sub" class="sub-nav">
+						<li class="sub-heading">Formulaires <label for="menu-3-4-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+						<li><a title="Travailler avec un champ de type text en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/32-input-text/">Input type text</a></li>
+						<li><a title="Travailler avec un textarea en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/33-textarea/">Textarea</a></li>
+						<li><a title="Travailler avec un select en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/34-select/">Select</a></li>
+						<li><a title="Travailler avec les checkbox en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/35-input-checkbox/">Input type checkbox</a></li>
+						<li><a title="Travailler avec des radio boutons en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/36-input-radio/">Input type radio</a></li>
+						<li><a title="Manipuler les propriétés readOnly et disabled en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/37-readonly-vs-disabled/">Readonly vs Disabled</a></li>
+
+					</ul>
+					<!--  Fin Sous Menu 3-4 -->
+				</li>
+
+
+				<li>
+
+					<a href="#" title='Vous voulez vous perfectionner en JavaScript et vous le "connaissez déjà"'>JavaScript ES6+</a>
+
+					<!--  Début Sous Menu 3-5 -->
+					<label for="menu-3-5-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-3-5-id" class="sub-nav-check">
+					<ul id="menu-3-5-sub" class="sub-nav">
+						<li class="sub-heading">JavaScript ES6+ <label for="menu-3-5-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+						<li><a title="Comprenez les types et les valeurs primitives" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/40-types-valeurs-primitives/">Types et valeurs primitives</a></li>
+						<li><a title="Comprenez var mais utilisez let et const" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/41-var-let-const/">var, let et const</a></li>
+						<li><a title="JavaScript : un langage fonctionnel avec des fonctions qui sont des objets !" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/42-javascript-fonctionnel-fonction-objet/">Aspect fonctionnel</a></li>
+						<li><a title="Apprendre les fonctions fléchées" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/43-fonctions-flechees/">Les fonctions fléchées</a></li>
+						<li><a title="Le paramètre Rest et arguments" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/44-gestion-argument/">Gestion des arguments</a></li>
+						<li><a title="Qu'est ce que this, Que vaut this ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/45-this/">Qu'est ce que this ?</a></li>
+						<li><a title="Comprendre les méthodes call, apply et bind" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/46-call-apply-bind/">call, apply et bind</a></li>
+						<li><a title="Etude de cas sur la valeur de this" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/45-etude-cas-this/">this : etude de cas</a></li>
+						<li><a title="Comprendre et utiliser les closures" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/47-fonction-closures/">Les closures</a></li>
+						<li><a title="Comprendre le mode strict ES5" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/48-mode-strict/">Le mode strict</a></li>
+						<li><a title="Apprendre à travailler avec les exceptions" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/49-exceptions/">Les exceptions</a></li>
+						<li><a title="Apprendre à utiliser les méthodes forEach et map" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/50-array-forEach-map/">forEach et map</a></li>
+						<li><a title="Apprendre à utiliser sort filter reduce" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/51-array-sort-filter-reduce/">sort filter reduce</a></li>
+						<li><a title="Apprendre à convertir une Collection en un Array" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/52-collection-to-array/">Convertir en un Array</a></li>
+						<li><a title="Les conversions de type implicites" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/57-conversion-type-implicite/">Convertions implicites</a></li>
+						<li><a title="Les opérateurs logiques séquentiels && et ||" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/59-et-ou-sequentiel/">Les opérateurs && et ||</a></li>
+						<li><a title="Qu'est ce que le hoisting ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/53-hoisting/">Le hoisting</a></li>
+						<li><a title="Qu'est ce qu'un descripteur de propriété ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/54-property-descriptor/">Le descripteur de propriété</a></li>
+						<li><a title="Les template string" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/55-template-string/">Les template string</a></li>
+						<li><a title="Qu’est ce que le destructuring et le spread operator" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/56-destructuring-spread-operator/">Déstructurer SpreadOperator</a></li>
+						<li><a title="Les modules JavaScript ES6" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/58-module-import-export/">Les modules JavaScript ES6</a></li>
+					</ul>
+					<!--  Fin Sous Menu 3-5 -->
+				</li>
+
+				<li>
+
+					<a href="#" title="Etude de l'asynchronisme en JavaScript">JavaScript Asynchrone</a>
+
+					<!--  Début Sous Menu 3-6 -->
+					<label for="menu-3-6-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-3-6-id" class="sub-nav-check">
+					<ul id="menu-3-6-sub" class="sub-nav">
+						<li class="sub-heading">JavaScript Asynchrone <label for="menu-3-6-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+						<li><a title="Qu'est ce qu'une requête Asynchrone ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/60-requete-asynchrone/">Requête Asynchrone</a></li>
+						<li><a title="Qu'est ce qu'il y a dans une requête HTTP ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/61-requete-http/">Requête HTTP</a></li>
+						<li class='to-quizz'><a title="Quiz sur l'asynchronisme et sur les requêtes HTTP" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=23">Quiz</a></li>
+						<li><a title="Comprendre ce qu'est le format JSON" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/62-json/">Qu'est ce que JSON</a></li>
+						<li class='to-quizz'><a title="Quiz sur JSON" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=24">Quiz</a></li>
+						<li><a title="XMLHttpRequest pour faire des requête Ajax" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/63-XMLHttpRequest/">XMLHttpRequest</a></li>
+						<li><a title="XMLHttpRequest faire une fonction GET et une fonction POST" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/64-function-get-post/">fonctions GET et POST</a></li>
+						<li class='to-quizz'><a title="Quiz sur XMLHttpRequest" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=25">Quiz</a></li>
+						<li><a title="Les promesses en JavaScript" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/65-promesse/">Les promesses</a></li>
+						<li class='to-quizz'><a title="Quiz sur les promesses" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=26">Quiz</a></li>
+						<li><a title="Utiliser l'API fetch" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/66-fetch/">API fetch</a></li>
+						<li class='to-quizz'><a title="Quiz sur fetch" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=27">Quiz</a></li>
+						<li><a title="A quoi sert CORS ?" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/67-cors/">A quoi sert CORS ?</a></li>
+						<li class='to-quizz'><a title="Quiz sur CORS" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=28">Quiz</a></li>
+						<li><a title="Comprendre async / await" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/68-async-await/">async / await</a></li>
+						<li class='to-quizz'><a title="Quiz sur async / await" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/00-presentation/index.php?quizz_id=22">Quiz</a></li>
+						<li><a title="Comprendre Promise.all, Promise.any et Promise.race" href="/V2/TUTO/CHAPITRE/JAVASCRIPT/69-promesse-all-any-race/">Promise all any et race</a></li>
+					</ul>
+					<!--  Fin Sous Menu 3-6 -->
+				</li>
+
+			</ul>
+			<!--  Fin Sous Menu 3 -->
+
+		</li>
+
+		<!-- 		<li><a href="#">PHP</a> </li>
+<li><a href="#">MYSQL</a> </li>
+<li><a href="#">AJAX</a> </li> -->
+
+		<li><a href="#">NODE</a>
+			<!--  Début Sous Menu 4 -->
+			<label for="menu-4-id" class="toggle-sub" onclick="">&#9658;</label>
+			<input type="checkbox" id="menu-4-id" class="sub-nav-check">
+			<ul id="menu-4-sub" class="sub-nav">
+				<li class="sub-heading">NODE <label for="menu-4-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+				<li><a title="Qu'est-ce que Node.js" href="/V2/TUTO/CHAPITRE/NODE/01-node-js/">Qu'est ce que Node.js</a></li>
+
+				<li><a title="Découverte de l'Api de Node.js" href="/V2/TUTO/CHAPITRE/NODE/02-api-node-js/">Api de Node.js</a></li>
+
+				<li><a title="npm avec Node.js Faire un fetch" href="/V2/TUTO/CHAPITRE/NODE/03-npm-fetch-node-js/">Faire un fetch</a></li>
+			</ul>
+			<!--  Fin Sous Menu 4 -->
+		</li>
+
+
+		<li><a href="#">OUTILS</a>
+
+			<!--  Début Sous Menu 5 -->
+			<label for="menu-5-id" class="toggle-sub" onclick="">&#9658;</label>
+			<input type="checkbox" id="menu-5-id" class="sub-nav-check">
+			<ul id="menu-5-sub" class="sub-nav">
+				<li class="sub-heading">OUTILS <label for="menu-5-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+
+				<li><a title="Raccourcis clavier de VSCode et playlist sur l'utilisation de VSCode" href="/V2/TUTO/CHAPITRE/OUTILS/24-vscode">VSCode</a></li>
+
+				<li class="fly-left">
+
+					<a href="#">Sublime Text</a>
+
+					<!--  Début Sous Menu 5-2 -->
+					<label for="menu-5-2-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-5-2-id" class="sub-nav-check">
+					<ul id="menu-5-2-sub" class="sub-nav">
+						<li class="sub-heading">Sublime Text <label for="menu-5-2-id" class="toggle" onclick="" title="Back">&#9658;</label></li>
+						<li><a title="Sublime Text 3 Comment le configurer. Les principaux plugins" href="/V2/TUTO/CHAPITRE/OUTILS/03-sublime-configuration/">Configuration</a></li>
+						<li><a title="Les bases de Sublime Text." href="/V2/TUTO/CHAPITRE/OUTILS/04-sublime-les-bases/">Les Bases</a></li>
+						<li><a title="Sublime Text Travailler avec les curseurs multiple" href="/V2/TUTO/CHAPITRE/OUTILS/05-sublime-curseur-multiple/">Curseurs Multiples</a></li>
+						<li><a title="Sublime Text Comment travailler avec les snippets" href="/V2/TUTO/CHAPITRE/OUTILS/06-sublime-travailler-snippets/">Les snippets</a></li>
+						<li><a title="Sublime Text Comment travailler avec les projets" href="/V2/TUTO/CHAPITRE/OUTILS/07-sublime-gestion-projet/">Gestion des Projets</a></li>
+						<li><a title="Sublime Text Trouvez tout ce dont vous avez besoin" href="/V2/TUTO/CHAPITRE/OUTILS/08-sublime-tout-trouver/">Tout Trouver</a></li>
+						<li><a title="Sublime Text. Les fonctions rechercher et rechercher / remplacer." href="/V2/TUTO/CHAPITRE/OUTILS/09-sublime-rechercher-remplacer/">Rechercher Remplacer</a></li>
+						<li><a title="Sublime Text Travailler avec Emmet en HTML et en CSS" href="/V2/TUTO/CHAPITRE/OUTILS/10-sublime-emmet/">Travailler avec Emmet</a></li>
+						<li><a title="Comment gérer les raccourcis Sublime Text" href="/V2/TUTO/CHAPITRE/OUTILS/11-gerer-raccourcis/">Gérer les raccourcis</a></li>
+						<li><a title="Comment créer un snippet" href="/V2/TUTO/CHAPITRE/OUTILS/20-sublime-creer-snippet/">Créer un snippet</a></li>
+						<li><a title="Comment reconfigurer les snippets Sublime installés par défaut" href="/V2/TUTO/CHAPITRE/OUTILS/21-sublime-modifier-snippet/">Modifier des snippets</a></li>
+						<li><a title="Comment reconfigurer les abréviations Emmet installés par défaut" href="/V2/TUTO/CHAPITRE/OUTILS/22-sublime-configurer-emmet/">Configurer Emmet</a></li>
+						<li class='to-quizz'><a title="Quiz de mémorisation des raccourcis Sublime Text" href="/V2/TUTO/CHAPITRE/OUTILS/00-presentation/index.php?quizz_id=19">Quiz</a></li>
+					</ul>
+					<!--  Fin Sous Menu 5-2 -->
+				</li>
+
+
+				<li class="fly-left">
+
+					<a href="#">Notepad++</a>
+
+					<!--  Début Sous Menu 5-1 -->
+					<label for="menu-5-1-id" class="toggle-sub" onclick="">&#9658;</label>
+					<input type="checkbox" id="menu-5-1-id" class="sub-nav-check">
+					<ul id="menu-5-1-sub" class="sub-nav">
+						<li class="sub-heading">Notepad ++ <label for="menu-5-1-id" class="toggle" onclick="" title="Back">&#9658;</label>
+						</li>
+						<li><a title="Installation de Notepad++ en version 7.8.2 sous Windows 10" href="/V2/TUTO/CHAPITRE/OUTILS/12-notepad-installation/">Installation</a></li>
+						<li><a title="Utilisation de base" href="/V2/TUTO/CHAPITRE/OUTILS/13-notepad-utilisation-base/">Utilisation de base</a></li>
+						<li><a title="Utilisation avancée" href="/V2/TUTO/CHAPITRE/OUTILS/14-notepad-utilisation-avancee/">Utilisation avancée</a></li>
+						<li><a title="Gestion des projets" href="/V2/TUTO/CHAPITRE/OUTILS/15-notepad-projet/">Gestion des projets</a></li>
+						<li><a title="Utilisation des fonctionnalités de recherche" href="/V2/TUTO/CHAPITRE/OUTILS/16-notepad-la-recherche/">La recherche</a></li>
+						<li><a title="Installation d'Emmet" href="/V2/TUTO/CHAPITRE/OUTILS/17-notepad-plugin-emmet/">Le plugin Emmet</a></li>
+						<li><a title="Installation et Utilisation du plugin Compare" href="/V2/TUTO/CHAPITRE/OUTILS/18-notepad-plugin-compare/">Le plugin Compare</a></li>
+						<li><a title="Installation et utilisation du plugin NppFTP" href="/V2/TUTO/CHAPITRE/OUTILS/19-notepad-plugin-ftp/">Le plugin NppFTP</a></li>
+					</ul>
+					<!--  Fin Sous Menu 5-1 -->
+
+				</li>
+
+				<li><a title="Installation, configuration, utilisation de Filezilla" href="/V2/TUTO/CHAPITRE/OUTILS/02-filezilla/">Filezilla</a></li>
+
+				<li><a title="Principe et utilisation du reCAPTCHA" href="/V2/TUTO/CHAPITRE/OUTILS/23-recaptcha/">reCAPTCHA</a></li>
+
+				<li><a title="Comment utiliser Composer" href="/V2/TUTO/CHAPITRE/OUTILS/26-composer/">Composer</a></li>
+
+			</ul>
+			<!--  Fin Sous Menu 5 -->
+
+		</li>
+
+
+	</ul>
+</nav>    
+
+	<main class="container">
+
+		<header id='header-large'>
+
+	<ul id='band-large'>
+
+		<li>
+			<a href='/' title='Accueil'>
+				<img src='/V2/COMMUN/img/logo-234-60.jpg' alt=''>
+			</a>
+		</li>
+					<li>
+				<a href='/V2/HOME/log-in.php' title='Connexion'>
+					<img src='/V2/COMMUN/img/log-in-large.png' alt=''>
+				</a>
+			</li>
+			</ul>
+</header>    
+		<header id='header-small'>
+
+	<ul id='band-small'>
+
+		<li>
+			<a href='/index.php' title='Accueil'>
+				<img src='/V2/COMMUN/img/logo-234-60.jpg' height="40" alt=''>
+			</a>
+		</li>
+		
+			<li>
+				<a href='/V2/HOME/log-in.php' title='Connexion'>
+					<img src='/V2/COMMUN/img/log-in.png' alt=''>
+				</a>
+			</li>
+			</ul>
+
+	<label for="main-nav-check" class="toggle" onclick="" title="Menu">&#x2261;</label>
+
+</header>    
+		<section id='tuto'>
+
+			<div id='icon-container'>
+				<a href='exe/sprite.zip'><img src='/V2/COMMUN/img/h1-download-tuto-32.png' alt='download' title='Télécharger de quoi faire le tuto'></a>
+				<img id='h1-arrow' src='/V2/COMMUN/img/h1-arrow-open-32.png' alt='close' title='Tout Replier'>
+			</div>
+
+			<h1>Les Sprites</h1>
+				<aside id='social'>
+		<a href='/V2/HOME/contact.php' target='_blank'><img src='/V2/COMMUN/img/mail.png'  alt='Mon Courriel'></a>
+		<a href='https://twitter.com/TutoDevWeb' target='_blank'><img src='/V2/COMMUN/img/Twitter.png' alt='Mon Twitter'></a>
+		<a href='https://www.linkedin.com/in/jl-fond-3b009b1a1/' target='_blank'><img src='/V2/COMMUN/img/LinkedIn.png' alt='Mon LinkedIn'></a>
+	</aside>
+			<div class='video-responsive'>
+<iframe width='560' height='315' src='https://www.youtube.com/embed/3Z3WaVszpUI?autoplay=1&mute=1' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+</div>
+
+<!-- 			<div id='boite-conteneur'>
+				<div id='boite-1'>
+					<figure class='ctr'>
+						<a href='https://www.youtube.com/channel/UCFLbfPD-LFpy1qnF9Oq_1Tg/' target='_blank'>
+						<img src='/V2/COMMUN/img/visiter-ma-chaine.png' alt='Visiter ma chaine Youtube'>
+						</a>
+					</figure>
+				</div>
+				<div id='boite-2'>
+					<p class='playlist'>
+					<a href='https://www.youtube.com/playlist?list=PLQkrqTy7RjTGElTrU_wtHcXVylMFsU5MG' target='_blank'>Voir&nbsp;la&nbsp;playlist</a>
+					</p>
+				</div>
+			</div>
+			<div class='video-responsive'>
+<iframe width='570' height='315' src='https://www.youtube.com/embed/3Z3WaVszpUI?autoplay=1&mute=1&list=PLQkrqTy7RjTGElTrU_wtHcXVylMFsU5MG' allowfullscreen></iframe>
+</div>
+ -->
+
+			<h2 id='h2_1'>
+<a href='#h2_1' onclick='return false;' title="Clic droit puis copier l'adresse du lien">#1</a>
+Un sprite qu'est ce que c'est ?
+<img src='/V2/COMMUN/img/roll-open-16.png' alt='open' title='Replier'>
+</h2>
+
+<div class='div_h2' id='div_1'>
+			<p>Un sprite c'est une image. Cette image est particulière car elle contient d'autres images de même taille. Ces images sont disposées en lignes et/ou en colonnes et forment une sorte de grille d'images.</p>
+			<p>Vous avez deux exemples ci-dessous : </p>
+			<figure>
+				<img class='illustration' src='img/sprite-download.jpg' alt="Un exemple de sprite" /><br/>
+				<figcaption>Un premier constitué d'une colonne de quatre images de 120px par 50px.</figcaption>
+			</figure>
+			<figure>
+				<img class='illustration' src='img/sprite-carte-credit.jpg' alt="Un autre exemple de sprite" />
+				<figcaption>Un second constitué de trois colonnes et cinq lignes d'images de 150px par 98px.</figcaption>
+			</figure>
+			</div>
+
+			<h2 id='h2_2'>
+<a href='#h2_2' onclick='return false;' title="Clic droit puis copier l'adresse du lien">#2</a>
+Un sprite comment ça marche ?
+<img src='/V2/COMMUN/img/roll-open-16.png' alt='open' title='Replier'>
+</h2>
+
+<div class='div_h2' id='div_2'>
+			<p>Le sprite est déposé dans le fond d'<strong>un conteneur qui a la taille d'une seule image</strong> constituant le sprite.</p>
+			<p>Le conteneur agit comme une fenêtre transparente à travers laquelle on peut voir <strong>une seule image</strong> du sprite déposée dans le fond.</p>
+			<p>Le reste du sprite qui déborde du conteneur est caché et ne nous gêne pas.</p>
+			<p>L'idée c'est de pouvoir choisir au sein du sprite l'image qui nous intéresse et pour cela <strong>on va déplacer la position du sprite</strong> dans le fond de son conteneur.</p>
+			<figure>
+				<img class='illustration' src='img/principe-sprite.jpg' alt="Principe de fonctionnement du sprite" />
+				<figcaption>Principe de fonctionnement du sprite.</figcaption>
+			</figure>
+			</div>
+
+
+			<h2 id='h2_3'>
+<a href='#h2_3' onclick='return false;' title="Clic droit puis copier l'adresse du lien">#3</a>
+Un sprite pour faire un rollover
+<img src='/V2/COMMUN/img/roll-open-16.png' alt='open' title='Replier'>
+</h2>
+
+<div class='div_h2' id='div_3'>
+			<p>La première application du sprite c'est proposer un effet visuel lorsque le curseur de votre souris survole un lien.
+			On appelle cet effet un rollover.</p>
+			<p>Pour faire ça on va se servir du CSS et des pseudo-classes associées aux différents états d'un lien. Pour chaque état qui nous intéresse on va choisir une image en déplaçant le sprite au moyen de  la propriété <code>background-position</code>.</p>
+
+<textarea id='my_test_1'><!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="rollover-sprite.css">
+</head>
+<body>
+	<a id='down' href='#'><span>Accueil</span></a>
+</body>
+</html></textarea>
+
+			<p>J'attire votre attention sur le fait qu'il est nécessaire de mettre un contenu textuel entre les balises du lien. Sans cela les synthétiseurs vocaux ne comprendront rien.</p>
+			<p>Toutefois ce texte est visuellement gênant car il recouvre l'image de fond. Il faut le cibler au moyen d'un élément <code>span</code> pour pouvoir le faire disparaître par un moyen CSS approprié.</p>
+
+<textarea id='my_test_2'>body {
+  background-color:#F5F6F8;
+}
+a#down {
+  /* Pour pouvoir dimensionner le lien */
+  display:inline-block;
+  /* Le conteneur a la taille d'une seule image */
+  width:120px;
+  height:50px;
+  /* On glisse le sprite dans le fond du conteneur */
+  background-image : url('download.jpg');
+  /* On positionne le sprite pour choisir une image */
+  background-position: 0px -150px;
+  background-repeat:no-repeat;
+}
+a#down:hover {
+  background-position: 0px -100px;
+}
+a#down:active {
+  background-position: 0px 0px;
+}
+a#down > span {
+  display:none;
+}</textarea>
+
+			<p>Je décris ici les étapes du travail CSS nécessaire à la préparation d'un lien :</p>
+			<ol>
+				<li>On met le lien en <code>display:inline-block;</code> pour pouvoir lui donner des dimensions.</li>
+				<li>On lui donne la taille d'une seule image du sprite.</li>
+				<li>On glisse le sprite dans le fond de son conteneur qui est en fait la partie cliquable du lien.</li>
+				<li>On choisit une première image qui sera utilisée lorsque le lien n'est pas survolé.</li>
+				<li>On utilise ensuite les pseudo-classes <code>:hover</code> et <code>:active</code> pour cibler ces deux états du lien. On décale les images à l'aide de la propriété <code>background-position</code>. Les décalages ont des valeurs négatives car il faut décaler les images vers la gauche ou/et vers le haut.</li>
+			</ol>
+
+			<p>Exemple : <a href='exe/rollover-sprite.html' target='_blank'>Utilisation d'un sprite pour faire un rollover</a></p>
+			<p>L'intérêt ici est d'éviter d'utiliser le Javascript.</p>
+			</div>
+
+			<h2 id='h2_4'>
+<a href='#h2_4' onclick='return false;' title="Clic droit puis copier l'adresse du lien">#4</a>
+Un sprite comme collection d'images
+<img src='/V2/COMMUN/img/roll-open-16.png' alt='open' title='Replier'>
+</h2>
+
+<div class='div_h2' id='div_4'>
+			<p>La deuxième application du sprite c'est de pouvoir choisir une seule image encapsulée dans la collection d'images que constitue le sprite.</p>
+			<p>Ci-dessous je fais un exemple dans lequel l'utilisateur peut choisir un mode de paiement.</p>
+			<p>Le HTML est fait d'un formulaire qui contient trois radio boutons. Les labels sont placés en <code>display:inline-block;</code>pour être dimensionnés. Dans leurs fonds on place un sprite.</p>
+
+<textarea id='my_test_3'><!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="carte-credit.css">
+</head>
+<body>
+	<form id='credit-card' method='GET' action=''>
+		<label for='choix-1'></label>
+		<input id='choix-1' name='choix' type='radio' value='1' checked>
+		<label for='choix-2'></label>
+		<input id='choix-2' name='choix' type='radio' value='2'>
+		<label for='choix-3'></label>
+		<input id='choix-3' name='choix' type='radio' value='3'>
+	</form>
+</body>
+</html></textarea>
+
+<textarea id='my_test_4'>form#credit-card label {
+  display:inline-block;
+  width:150px;
+  height:98px;
+  background-image:url('carte-credit.jpg');
+  background-repeat:no-repeat;
+  vertical-align:middle;
+}
+
+/* Paypal */
+form#credit-card label:nth-child(1) {
+  background-position: 0px 0px;
+}
+
+/* American Express */
+form#credit-card label:nth-child(3) {
+  background-position: -150px 0px;
+}
+
+/* Visa */
+form#credit-card label:nth-child(5) {
+  background-position: -150px -98px;
+}</textarea>
+
+			<p>Exemple : <a href='exe/carte-credit.html' target='_blank'>Utilisation d'un sprite comme collection d'images</a></p>
+
+			<p>L'intérêt d'utiliser un sprite ici réside dans le fait qu'une seule requête serveur permet de charger toutes les images. Il y a un intérêt aussi au niveau du poids des images. Une seule image en qualité jpeg de 80 pèse 6.1 ko. La totalité des 15 images pèse 72 ko soit 4.8 ko par image.</p>
+
+			<p>Ci-dessous j'ai récupéré ce sprite d'icônes utilisé dans Jquery UI. Une seule icône pèserait 244 octets alors que le sprite de 80 images pèse 5.5ko soit environ 57 octets par image. On bénéficie dans ce cas d'une sorte de factorisation de la table des couleurs qui est identique pour toutes les images.</p> 
+
+			<figure>
+				<img src='img/jquery-ui-icons.png' alt="Sprite utilisé dans Jquery UI" />
+				<figcaption>Sprite utilisé dans <a href='https://jqueryui.com/themeroller/' target='_blank'>Jquery UI</a></figcaption>
+			</figure>  
+			</div>
+
+		</section>
+		<footer>
+<p>&copy; 2017-2022 devenir-webmaster.com</p>
+</footer>
+
+	<ul id='check_tools'>
+
+		<li>
+			<a href="/V2/HOME/contact.php" target='_blank'><img src="/V2/COMMUN/img/mail.png" alt="Icon Mail"></a> 
+
+		</li><li>
+
+			<a href="https://twitter.com/TutoDevWeb" target='_blank'><img src="/V2/COMMUN/img/Twitter.png" alt="Icon Twitter"></a>
+
+		</li><li>
+
+			<a href="https://www.linkedin.com/in/jl-fond-3b009b1a1/"><img src="/V2/COMMUN/img/LinkedIn.png" alt="Icon LinkedIn"></a>
+
+		</li><li>
+			<a href="http://validator.w3.org/check?uri=https://www.devenir-webmaster.com%2FV2%2FTUTO%2FCHAPITRE%2FHTML-CSS%2F36-les-sprites-css%2F" onclick="window.open(this.href); return false;" rel='nofollow'><img src="/V2/COMMUN/img/check-html5.png" alt="Icon HTML5"></a>
+		</li><li>
+			<a href="http://jigsaw.w3.org/css-validator/validator?uri=https://www.devenir-webmaster.com%2FV2%2FTUTO%2FCHAPITRE%2FHTML-CSS%2F36-les-sprites-css%2F" onclick="window.open(this.href); return false;" rel='nofollow'><img src="/V2/COMMUN/img/check-css3.png" alt="Icon CSS3"></a>
+		</li>
+
+	</ul>
+	
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="/V2/COMMUN/jvscripts/arrow.js"></script>
+
+	<!--   Codemirror -->
+	<script src="/V2/COMMUN/codemirror/bundle/concat.min.js"></script>
+
+	<script>
+		var editor_1 = CodeMirror.fromTextArea(document.getElementById('my_test_1'), {lineNumbers: true,theme : "blackboard",readOnly:true,  mode: "application/x-httpd-php"});
+		var editor_2 = CodeMirror.fromTextArea(document.getElementById('my_test_2'), {lineNumbers: true,theme : "blackboard",readOnly:true,  mode: "text/css"});
+		var editor_3 = CodeMirror.fromTextArea(document.getElementById('my_test_3'), {lineNumbers: true,theme : "blackboard",readOnly:true,  mode: "application/x-httpd-php"});
+		var editor_4 = CodeMirror.fromTextArea(document.getElementById('my_test_4'), {lineNumbers: true,theme : "blackboard",readOnly:true,  mode: "text/css"});
+
+	</script>
+</body>
+</html>
+
