@@ -53,7 +53,7 @@ ul {
 .background {
     background-color: var(--clr-gray-element-color);
     font-size: var(--fs-default-text-size);
-    
+    font-family: var(--ffamily-default);
 }
 
 .container {
@@ -111,7 +111,15 @@ h3{
     width: 10rem;
 } */
 
+@font-face {
+    font-family:open_sans ;
+    src: url(./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
 
+@font-face {
+    font-family:raleway ;
+    src: url(./fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
 
 
 :root{
@@ -121,6 +129,10 @@ h3{
     --fs-title-text-size-2: 2.4rem;
     --fs-text-size-of-headings-3: 1.8rem ;
     --fh-line-height: 2.0rem;
+
+    /*font family*/
+    --ffamily-title: raleway;
+    --ffamily-default: open_sans;
 
     /* Color */
     --clr-default-page-color:#eee;
@@ -169,6 +181,29 @@ h3{
 header {
     background-image: url(./images/header.jpg);
     background-size: cover;
+    
+}
+
+.color_header{
+    color:var(--clr-default-page-color);
+}
+
+.form .search{
+    border:none;
+    background-color: transparent;
+    color:var(--clr-default-page-color);
+}
+
+.form select{
+  appearance: none;
+}
+
+.form input::placeholder{
+    color:var(--clr-default-page-color);
+}
+
+h1, h2, h3{
+    font-family: var(--ffamily-title);
 }
 
 .header_container{
@@ -265,15 +300,11 @@ strong{
     appearance:none;
 }
 
-.form span svg{
+.form span{
     color:white;
-    width: 20px;
+    font-size: 10px;
 }
 
-.form span{
-    display:flex;
-    justify-content:flex-start;
-}
 
 .flex_column svg{
     width:2rem;
@@ -422,6 +453,7 @@ main h2
     padding-bottom: 1.5rem;
     position: 
     relative;
+    color:var(--clr-titles-color);
 }
 
 
@@ -522,6 +554,7 @@ main h3::after
 {
     padding-bottom: 2rem;
 }
+
 .shoppingbag_button button
 {
     border: none;
@@ -547,7 +580,7 @@ main h3::after
 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;color:var(--clr-titles-color);
     gap: 1rem;
 }
 
@@ -563,6 +596,7 @@ main h3::after
     list-style: initial;
     position: absolute;
     left: 36px;
+    
 }
 
 .description > img
@@ -584,6 +618,7 @@ h3
 {
     clear: both;
     padding-bottom: 1rem;
+    color:var(--clr-titles-color);
 }
 
  table 
@@ -613,7 +648,7 @@ h3
     color: var(--clr-links-and-buttons);
 }
 
-.fil_ariane svg{
-    width:1rem;
+.fil_ariane span{
+    font-size: 24px;
     color: var(--clr-links-and-buttons);
 }
