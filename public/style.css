@@ -957,3 +957,160 @@ h3
         text-align: center;
     }
 }
+
+/************************************************CSS Modal***************************************************/
+.modal_form 
+{
+    width: 100%;
+    height: 100%;
+    margin: 3rem auto;
+    position: fixed;
+    text-align: center;
+    padding: 2rem;
+    top: -49px;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transition: opacity 400ms ease-in;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal_form form span
+{
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    color: #fff;
+    background-color: grey;
+    border: 1px solid #fff;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.modal_form form{
+    margin: 0;
+    display: flex;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    background: #fff;
+    transition: opacity 400ms ease-in;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal_form form fieldset
+{
+    background-color: rgb(231, 231, 239); 
+    padding: .5rem;
+    position: relative;
+    border: none;
+    box-shadow:var(--lg) ;
+    margin-top:2rem;
+    max-width: 920px;
+}
+
+.modal_form form fieldset:nth-of-type(2)
+{
+    width:600px;
+    background-color: rgb(231, 231, 239); 
+    padding: .5rem;
+    position: relative;
+    border: none;
+    box-shadow:var(--lg) ;
+    margin-top:2rem;
+}
+
+.modal_form div{
+    margin:1rem;
+}
+
+.modal_form form input 
+{
+    width: 50%;
+    padding: 1rem;
+    border-radius:5px;
+    border:none;
+}
+
+.modal_form > fieldset >p
+{
+    margin:1rem;
+}
+
+fieldset button
+{
+    background-color: #0c6588;
+    color: #fff;
+    padding: .2rem;
+    border:none;
+    width:100px;
+
+}
+
+.button_login
+{
+    display: flex;
+    justify-content:center;
+    gap: 10rem;
+
+}
+
+
+
+.create_acount
+{
+    margin-top: 1.5rem;
+    background-color: #fff; 
+    padding: 1rem;
+    border: none;
+    box-shadow:var(--lg) ;
+    border-radius:5px;
+}
+
+.modal_form .create_acount a
+{
+    background-color: #0c6588;
+    color: #fff;
+    padding: .2rem;
+    margin-top: 1rem; 
+    text-decoration: none;
+}
+
+.modal_form a
+{
+    color: #0c6588;
+}
+
+.modal_form span a
+{
+    color: #fff;
+    text-decoration: none;
+    position: sticky;
+}
+
+
+.create_acount p
+{
+    margin-bottom:1rem ;
+}
+
+form.disappear{
+    display:none;
+}
+
+form.appear{
+    display:initial
+}
+
+.none_form{
+    display:none;
+}

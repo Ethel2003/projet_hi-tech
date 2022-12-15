@@ -48,7 +48,7 @@
                     </form>
                 </div>
                 <div class="flex account">
-                    <p class="flex_column">
+                    <p class="flex_column" id="modal">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                         </svg>
@@ -245,6 +245,79 @@
             </nav>
         </div>
    </header> 
+   <!-- LE FORMULAIRE D'INSCRIPTION ET DE VALIDATION -->
+ <section class="modal_form none_form" id="login">
+    
+    <form method="post" action="#" id="connexion">
+
+        <span id="closeLogin"><a href="#">x</a></span>
+        <h2>Mon compte</h2>
+        <fieldset>
+
+            <p>J'ai déjà un compte</p>
+            <div>
+                <label for="loginEmail">Mon adresse email</label>
+                <input type="email" name="email" id="loginEmail">
+            </div>
+   
+            <div>
+                <label for="loginPassword">Mon mot de passe</label>
+                <input type="password" name="password" id="loginPassword">
+            </div>
+
+            <div class="button_login">
+                <button>
+                    Se connecter
+                </button>
+                <a href="#">J'ai oublié mon mot de passe </a>
+            </div>
+
+            <div class="create_acount center">
+                <p>J'ai pas de compte</p>
+                <a href="#" id="create_acount">Créer un compte</a>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+    <form action="#" method="post"  class="disappear" id="register">
+        
+        <span id="closeRegister"><a href="#">x</a></span>
+        <h2>Inscription</h2>
+        <fieldset>
+
+            <p>Entrez vos informations</p>
+            <div>
+                <input type="text" id="surname" class="input"  name="lname" placeholder="Nom"required>
+            </div>
+
+            <div>
+                <input type="text" id="surname" class="input"  name="fname" placeholder="Prénom"required>
+            </div>
+        
+            <div>
+                <input type="email" id="registerEmail" name="email" class="input" placeholder=" Votre Email" required>
+            </div>
+           
+            <div>
+                <input type="password" name="mpd" id="password" placeholder="Entrez un mot de passe">
+            </div>
+           
+            <div>
+                <input type="password" name="mpd" id="confPassword" placeholder=" Entrez votre mot de passe à nouveau">
+            </div>
+            
+            <div>
+                <button type="submit">Valider</button>
+                <a href="#" id="have_account" >J'ai déjà un compte</a>
+            </div>
+
+        </fieldset>
+        
+    </form>
+   
+</section>
     <main class="header_container container">
     <div class="container">
       <!-- le fil d'ariane -->
@@ -546,5 +619,7 @@
             </p>
         </div>
 </footer>
+ 
 </body>
+<script src="./modal.js"></script>
 </html>
