@@ -62,6 +62,10 @@
 
      getFormConnexion.classList.add("disappear");
      console.log("Apparition du formlaire d'inscription");
+     if (getFormConnexion.classList.contains('appear')) {
+        getFormConnexion.classList.remove('appear');
+        //getFormRegister.classList.add("disappear");
+    }
  })
 
  //Mise en place d'un écouteur sur le lien have_account
@@ -73,6 +77,11 @@
      getFormConnexion.classList.remove("none_form");
      getFormConnexion.classList.add("appear");
      console.log("Apparition du formlaire de connexion");
+
+     if (getFormRegister.classList.contains('none_form')) {
+        getFormRegister.classList.remove('none_form');
+        getFormRegister.classList.add("disappear");
+    }
  })
 
 
