@@ -1,7 +1,7 @@
 
 
 //This program is responsible for making the shelves appear after a click on the store
-/**Un exemple juste pour tester la fonction */
+/**Un exemple juste pour tester la fonction **/
 let elem_at_click = document.querySelectorAll('.shop-title')
 console.log(elem_at_click)
 let appearElem=document.querySelectorAll(".scroll_menu_shop")

@@ -223,12 +223,12 @@ header .logo a >img {
 } 
 
 
-nav ul li:hover .none{
+/*nav ul li:hover .none{
     display:flex;
     background-color:var(--clr-clor-hover-links-and-buttons);
     box-shadow:0 10px 20px rgba(0,0,0,0.5);
     z-index: 9999;
-}
+}*/
 
 
 .flex_nav {
@@ -243,6 +243,7 @@ nav ul li:hover .none{
 .none {
    display:none;
    gap: 1.5rem;
+   background-color:var(--clr-clor-hover-links-and-buttons);
 }
 
 nav>ul{
@@ -656,6 +657,7 @@ h3
    
     justify-content: space-between;
     padding: 1.5rem;
+    align-items: center;
 }
 
 .fil_ariane{
